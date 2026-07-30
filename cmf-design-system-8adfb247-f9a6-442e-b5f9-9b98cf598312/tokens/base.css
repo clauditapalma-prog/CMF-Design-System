@@ -1,0 +1,62 @@
+/* ============================================================
+   CMF — Base element styles & helpers (lightweight, opt-in)
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--text-body);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  color: var(--text-strong);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  margin: 0 0 var(--space-4);
+  font-weight: var(--fw-bold);
+}
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
+
+p { margin: 0 0 var(--space-4); text-wrap: pretty; }
+
+a {
+  color: var(--text-link);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+a:hover { color: var(--text-link-hover); text-decoration: underline; }
+
+:focus-visible {
+  outline: var(--border-w-thick) solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+/* Eyebrow / kicker — uppercase tracked label, a recurring CMF motif */
+.cmf-eyebrow {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--color-brand-soft);
+}
+
+/* Accent rule — the thin purple line under the logo / headings */
+.cmf-rule {
+  height: var(--accent-bar-w);
+  width: 56px;
+  background: var(--color-brand);
+  border: 0;
+  border-radius: var(--radius-pill);
+  margin: var(--space-3) 0;
+}

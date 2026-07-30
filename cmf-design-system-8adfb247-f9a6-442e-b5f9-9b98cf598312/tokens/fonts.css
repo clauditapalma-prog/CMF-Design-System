@@ -1,0 +1,9 @@
+/* ============================================================
+   CMF — Web fonts
+   Brand/official typeface is VERDANA (per Manual de marca & PPTX
+   templates: "Título pptx — Verdana bold 37 pts"). Verdana is a
+   system font, so no binary is shipped for it.
+   For digital/UI surfaces we pair it with Source Sans 3 — an open
+   humanist sans. Both choices confirmed/approved with the brand owner.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');

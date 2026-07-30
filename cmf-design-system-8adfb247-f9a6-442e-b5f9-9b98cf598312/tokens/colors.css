@@ -1,0 +1,89 @@
+/* ============================================================
+   CMF — Color tokens
+   Source of truth: Manual de uso de marca CMF (versión resumida, 2026)
+   Core brand: Pantone 268C #5B2B82 · 2587C #8547AD · 424C #717271 · #575756
+   Graphic-support palette sampled from official PPTX cover templates.
+   ============================================================ */
+
+:root {
+  /* ---- Brand purple (primary identity) ---------------------- */
+  --cmf-purple-900: #3a1a53;   /* deep shade, pressed / text on tint */
+  --cmf-purple-800: #4a2169;
+  --cmf-purple-700: #5b2b82;   /* ★ Pantone 268 C — primary brand */
+  --cmf-purple-500: #8547ad;   /* ★ Pantone 2587 C — secondary purple */
+  --cmf-purple-300: #b68fd0;
+  --cmf-purple-200: #d8c4e6;
+  --cmf-purple-100: #ece1f3;
+  --cmf-purple-50:  #f6f1fa;
+
+  /* ---- Neutral / ink (Pantone 424 C family) ----------------- */
+  --cmf-ink-900: #2c2c2b;      /* strongest text */
+  --cmf-ink-800: #444444;
+  --cmf-ink-700: #575756;      /* ★ dark gray */
+  --cmf-ink-500: #717271;      /* ★ Pantone 424 C */
+  --cmf-ink-400: #969695;
+  --cmf-ink-300: #bcbcbb;
+  --cmf-ink-200: #d7d7d6;
+  --cmf-ink-100: #e9e9e8;
+  --cmf-ink-50:  #f5f5f4;
+  --cmf-white:   #ffffff;
+
+  /* ---- Graphic-support / accent palette --------------------- */
+  /* "Primera categoría" — rich tones for covers & graphic blocks */
+  --cmf-navy:       #162c55;   /* deep institutional navy */
+  --cmf-indigo:     #3f3a7e;   /* violet-indigo bridge to purple */
+  --cmf-teal:       #12a095;   /* signature teal/green */
+  --cmf-teal-deep:  #0e6e68;
+  /* "Segunda categoría / complementarios" — lighter support */
+  --cmf-teal-200:   #97d6d2;   /* soft teal */
+  --cmf-teal-50:    #e4f4f2;
+
+  /* ---- Functional / status (harmonised, not in manual) ------ */
+  --cmf-success:    #1e8a5b;
+  --cmf-success-bg: #e6f3ec;
+  --cmf-warning:    #b97708;
+  --cmf-warning-bg: #fbf0dc;
+  --cmf-danger:     #c0392b;
+  --cmf-danger-bg:  #f9e7e4;
+  --cmf-info:       #162c55;
+  --cmf-info-bg:    #e7ecf4;
+
+  /* ============================================================
+     SEMANTIC ALIASES — use these in components
+     ============================================================ */
+  /* Brand */
+  --color-brand:            var(--cmf-purple-700);
+  --color-brand-strong:     var(--cmf-purple-800);
+  --color-brand-soft:       var(--cmf-purple-500);
+  --color-brand-tint:       var(--cmf-purple-100);
+  --color-brand-tint-faint: var(--cmf-purple-50);
+  --color-accent:           var(--cmf-teal);
+  --color-accent-deep:      var(--cmf-teal-deep);
+  --color-accent-tint:      var(--cmf-teal-50);
+
+  /* Text */
+  --text-strong:    var(--cmf-ink-900);
+  --text-body:      var(--cmf-ink-700);
+  --text-muted:     var(--cmf-ink-500);
+  --text-faint:     var(--cmf-ink-400);
+  --text-on-brand:  var(--cmf-white);
+  --text-link:      var(--cmf-purple-700);
+  --text-link-hover:var(--cmf-purple-800);
+
+  /* Surfaces */
+  --surface-page:    var(--cmf-ink-50);
+  --surface-card:    var(--cmf-white);
+  --surface-sunken:  var(--cmf-ink-100);
+  --surface-brand:   var(--cmf-purple-700);
+  --surface-navy:    var(--cmf-navy);
+  --surface-inverse: var(--cmf-navy);
+
+  /* Borders */
+  --border-subtle:  var(--cmf-ink-200);
+  --border-default: var(--cmf-ink-300);
+  --border-strong:  var(--cmf-ink-500);
+  --border-brand:   var(--cmf-purple-700);
+
+  /* Focus ring */
+  --focus-ring: var(--cmf-purple-500);
+}
