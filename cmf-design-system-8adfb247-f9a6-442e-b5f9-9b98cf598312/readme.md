@@ -81,12 +81,19 @@ Cómo escribe la CMF — replica esta voz en cada componente, pantalla y diaposi
 - `SKILL.md` — front matter de Agent-Skill para usar en Claude Code.
 
 **`tokens/`** — `fonts.css`, `colors.css`, `typography.css`, `spacing.css`, `base.css`.
+`fonts.css` sirve Source Sans 3 desde **`fonts/`** (autohospedada), no desde Google Fonts: el
+sistema debe funcionar en despliegues internos sin salida a internet. Es una fuente variable, así
+que un archivo por subconjunto (`latin`, `latin-ext`) cubre los pesos 200-900.
 
-**`assets/logos/`** — `cmf-logo-horizontal-claim.jpg`, `cmf-logo-vertical.png` (transparente), `cmf-logo-vertical.jpg`, `cmf-logo-vertical-white.png` (fondo oscuro), `cmf-logo-vertical-watermark.png` (timbre #CCCCCC), `cmf-logo-vertical-grey-official.jpg` (marca de agua gris oficial del .pptx).
+**`assets/logos/`** — **las nueve variantes oficiales** descargadas del kit digital de la CMF
+(https://kitdigital.cmfchile.cl/logo-CMF.html), más el original `.ai` y el SVG blanco vectorial.
+Reglas de uso, los tres casos permitidos y la advertencia sobre recoloreo: **`assets/logos/LOGOS.md`**.
+Preferir siempre la variante **con claim**; el logo con claim no tiene versión vertical.
 
 **`assets/backgrounds/`** — `cmf-cover-band-2026.jpeg` (banda navy de red oficial), `cmf-footer-strip-2026.jpg` (pie navy oficial con sitio + iconos sociales), `cmf-network-texture.jpeg` (textura de red sin logo, para heroes).
 
 **`components/`** — primitivos React reutilizables (cada uno: `.jsx` + `.d.ts` + `.prompt.md`, con un `*.card.html` por grupo):
+- `brand/` — **Logo** (elige el archivo oficial según el fondo; nunca recolorea)
 - `core/` — **Button**, **Badge**, **Card**, **Alert**
 - `forms/` — **Input**, **Select**, **Checkbox**
 - `navigation/` — **Tabs**, **Breadcrumb**
@@ -96,6 +103,8 @@ Cómo escribe la CMF — replica esta voz en cada componente, pantalla y diaposi
 **`slides/`** — diapositivas de muestra que replican las plantillas PPTX oficiales: `title-oficial-2026` (master oficial 2026 de banda navy), `title`, `section`, `content`, `data`, `closing`.
 
 **`guidelines/cards/`** — tarjetas de especímenes de fundamentos (Colores, Tipografía, Espaciado, Marca) que se muestran en la pestaña Design System.
+
+**`templates/`** — `Manual-uso-CMF-breve-2026.pdf`, el manual de marca oficial.
 
 **Generados (no editar):** `_ds_bundle.js`, `_ds_manifest.json`, `_adherence.oxlintrc.json`.
 
