@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"CMFDesignSystem_87b826","components":[{"name":"Logo","sourcePath":"components/brand/Logo.jsx"},{"name":"Alert","sourcePath":"components/core/Alert.jsx"},{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Breadcrumb","sourcePath":"components/navigation/Breadcrumb.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"Educa","sourcePath":"ui_kits/portal/Educa.jsx"},{"name":"Footer","sourcePath":"ui_kits/portal/Footer.jsx"},{"name":"Header","sourcePath":"ui_kits/portal/Header.jsx"},{"name":"Home","sourcePath":"ui_kits/portal/Home.jsx"},{"name":"Icon","sourcePath":"ui_kits/portal/Icon.jsx"},{"name":"Motif","sourcePath":"ui_kits/portal/Motif.jsx"},{"name":"ReclamoForm","sourcePath":"ui_kits/portal/ReclamoForm.jsx"},{"name":"Tramites","sourcePath":"ui_kits/portal/Tramites.jsx"}],"sourceHashes":{"components/brand/Logo.jsx":"7cfa4d2995e1","components/core/Alert.jsx":"41bac65e8aeb","components/core/Badge.jsx":"2f2af86d7f45","components/core/Button.jsx":"6d5927f3f7ba","components/core/Card.jsx":"ace400d36d26","components/forms/Checkbox.jsx":"f018c2276e7b","components/forms/Input.jsx":"b8d66aa3b199","components/forms/Select.jsx":"dfffdb079a79","components/navigation/Breadcrumb.jsx":"bbbc1d2e2a1c","components/navigation/Tabs.jsx":"c61121b4a145","ui_kits/portal/Educa.jsx":"be9f438cb151","ui_kits/portal/Footer.jsx":"b6b3e5bd24da","ui_kits/portal/Header.jsx":"d96e077ffb83","ui_kits/portal/Home.jsx":"6247705c4225","ui_kits/portal/Icon.jsx":"cf1d68693f88","ui_kits/portal/Motif.jsx":"75f4393fd5c4","ui_kits/portal/ReclamoForm.jsx":"6e13579b09fc","ui_kits/portal/Tramites.jsx":"1525a8d87046"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"CMFDesignSystem_87b826","components":[{"name":"Logo","sourcePath":"components/brand/Logo.jsx"},{"name":"Alert","sourcePath":"components/core/Alert.jsx"},{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Breadcrumb","sourcePath":"components/navigation/Breadcrumb.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"Educa","sourcePath":"ui_kits/portal/Educa.jsx"},{"name":"Footer","sourcePath":"ui_kits/portal/Footer.jsx"},{"name":"Header","sourcePath":"ui_kits/portal/Header.jsx"},{"name":"Home","sourcePath":"ui_kits/portal/Home.jsx"},{"name":"Icon","sourcePath":"ui_kits/portal/Icon.jsx"},{"name":"Motif","sourcePath":"ui_kits/portal/Motif.jsx"},{"name":"ReclamoForm","sourcePath":"ui_kits/portal/ReclamoForm.jsx"},{"name":"Tramites","sourcePath":"ui_kits/portal/Tramites.jsx"}],"sourceHashes":{"components/brand/Logo.jsx":"9777e26d7751","components/core/Alert.jsx":"41bac65e8aeb","components/core/Badge.jsx":"2f2af86d7f45","components/core/Button.jsx":"6d5927f3f7ba","components/core/Card.jsx":"ace400d36d26","components/forms/Checkbox.jsx":"f018c2276e7b","components/forms/Input.jsx":"b8d66aa3b199","components/forms/Select.jsx":"dfffdb079a79","components/navigation/Breadcrumb.jsx":"bbbc1d2e2a1c","components/navigation/Tabs.jsx":"c61121b4a145","ui_kits/portal/Educa.jsx":"be9f438cb151","ui_kits/portal/Footer.jsx":"ec650ddd257a","ui_kits/portal/Header.jsx":"d96e077ffb83","ui_kits/portal/Home.jsx":"6247705c4225","ui_kits/portal/Icon.jsx":"65d640702e95","ui_kits/portal/Motif.jsx":"75f4393fd5c4","ui_kits/portal/ReclamoForm.jsx":"6e13579b09fc","ui_kits/portal/Tramites.jsx":"1525a8d87046"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -24,7 +24,8 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
 const ARCHIVOS = {
   // fondo -> { conClaim, sinClaim, vertical }
   claro: {
-    conClaim: 'assets/logos/logo-CMF-color-claim.png',
+    // El SVG es la mejor opción en web: vectorial y con claim.
+    conClaim: 'assets/logos/logo-cmf-color-claim.svg',
     sinClaim: 'assets/logos/logo-CMF-color-horizontal.png',
     vertical: 'assets/logos/logo-CMF-color-vertical.jpg'
   },
@@ -810,9 +811,13 @@ Object.assign(__ds_scope, { Tabs });
 try { (() => {
 /**
  * CMF icon set — curated Lucide (https://lucide.dev) outline glyphs.
- * Stroke 1.75, 24×24, currentColor. SUBSTITUTION: the brand manual's
- * iconography page could not be extracted; Lucide is our chosen match
- * (consistent humanist line style suited to a public regulator).
+ * 24×24, currentColor, rounded caps/joins.
+ *
+ * SUBSTITUTION. The official set exists — manual pág. 12, reproducida en
+ * assets/icons/manual-p12-iconografia-oficial.png — pero sus vectores no se
+ * pudieron extraer del PDF. Lucide es el reemplazo temporal; el trazo por
+ * defecto se bajó de 1.75 a 1.4 para acercarse a la línea fina del set real.
+ * Reemplázalo cuando Comunicaciones entregue los SVG oficiales.
  */
 const P = {
   search: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("circle", {
@@ -924,7 +929,7 @@ function Icon({
   name,
   size = 22,
   color = 'currentColor',
-  strokeWidth = 1.75,
+  strokeWidth = 1.4,
   style
 }) {
   return /*#__PURE__*/React.createElement("svg", {
@@ -989,11 +994,11 @@ function Footer() {
       gap: 32
     }
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
-    src: "../../assets/logos/logo-CMF-blanco-vertical.png",
+    src: "../../assets/logos/logo-cmf-blanco.svg",
     alt: "CMF",
     style: {
-      height: 92,
-      marginBottom: 16
+      height: 54,
+      marginBottom: 18
     }
   }), /*#__PURE__*/React.createElement("p", {
     style: {

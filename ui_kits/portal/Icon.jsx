@@ -1,8 +1,12 @@
 /**
  * CMF icon set — curated Lucide (https://lucide.dev) outline glyphs.
- * Stroke 1.75, 24×24, currentColor. SUBSTITUTION: the brand manual's
- * iconography page could not be extracted; Lucide is our chosen match
- * (consistent humanist line style suited to a public regulator).
+ * 24×24, currentColor, rounded caps/joins.
+ *
+ * SUBSTITUTION. The official set exists — manual pág. 12, reproducida en
+ * assets/icons/manual-p12-iconografia-oficial.png — pero sus vectores no se
+ * pudieron extraer del PDF. Lucide es el reemplazo temporal; el trazo por
+ * defecto se bajó de 1.75 a 1.4 para acercarse a la línea fina del set real.
+ * Reemplázalo cuando Comunicaciones entregue los SVG oficiales.
  */
 const P = {
   search: <><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></>,
@@ -29,7 +33,7 @@ const P = {
   check: <><path d="m20 6-11 11-5-5" /></>,
 };
 
-export function Icon({ name, size = 22, color = 'currentColor', strokeWidth = 1.75, style }) {
+export function Icon({ name, size = 22, color = 'currentColor', strokeWidth = 1.4, style }) {
   return (
     <svg
       width={size} height={size} viewBox="0 0 24 24"

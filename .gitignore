@@ -7,4 +7,3 @@ node_modules/
 
 # NO ignorar los artefactos generados: _ds_bundle.js y _ds_manifest.json
 # son los que consumen las tarjetas, el UI kit y los proyectos externos.
-*.zip

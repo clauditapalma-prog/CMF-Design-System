@@ -1,11 +1,10 @@
 repo: clauditapalma-prog/CMF-Design-System
 branch: main
-path: cmf-design-system-8adfb247-f9a6-442e-b5f9-9b98cf598312
 
 ## Last sync
 
-date: 2026-08-21T19:15:56Z
-tree: 4117d9a31d6b
+date: 2026-08-21T20:05:36Z
+tree: 1b69c64ab3f8
 
 ### Updated in this project
 
@@ -14,12 +13,18 @@ tree: 4117d9a31d6b
 - Incorporados los fondos oficiales 2026 y el arte del master PPTX a `assets/backgrounds/`; manual PDF y PPTX en `guidelines/`.
 - Nueva plantilla `templates/portal/` con seis tweaks, y soporte de consumo por CDN / submódulo / npm / Agent Skill.
 
-> **El repo está por detrás de este proyecto.** El remoto sólo contiene tokens, fuentes, logos,
-> `components/brand/Logo.jsx`, `readme.md`, `styles.css` y los artefactos generados — todo anidado
-> bajo `cmf-design-system-8adfb247-f9a6-442e-b5f9-9b98cf598312/`. Falta empujar todo lo demás.
-> Al publicar, mover el contenido a la **raíz** del repo: las rutas relativas del sistema
-> (`styles.css` → `tokens/`, `tokens/fonts.css` → `../fonts/`, tarjetas → `../../_ds_bundle.js`)
-> asumen que la raíz del sistema es la raíz servida.
+- Publicado en el remoto: el contenido quedó en la **raíz** del repo (106 archivos) y se eliminó el snapshot anidado `cmf-design-system-8adfb247-…`.
+
+> **Remoto y proyecto sincronizados.** Verificado en `1b69c64ab3f8`: tokens, fuentes, logos y
+> fondos, los 10 componentes con sus `.d.ts`/`.prompt.md`, las 18 tarjetas, el UI kit del portal,
+> las 7 diapositivas, la plantilla y el manual PDF + PPTX. No subieron `uploads/`, `.thumbnail`
+> ni el zip. Las rutas relativas del sistema (`styles.css` → `tokens/`, `tokens/fonts.css` →
+> `../fonts/`, tarjetas → `../../_ds_bundle.js`) funcionan porque la raíz del sistema ES la raíz
+> del repo: no vuelvas a anidar el árbol.
+
+## Sync history
+
+- 2026-08-21T19:15:56Z · tree `4117d9a31d6b` — el remoto sólo tenía tokens, fuentes, logos, `components/brand/Logo.jsx`, `readme.md`, `styles.css` y los artefactos generados, anidados bajo `cmf-design-system-8adfb247-…`. Ese snapshot fue la fuente de la reconstrucción.
 
 ## Screen map
 
@@ -35,6 +40,6 @@ tree: 4117d9a31d6b
 | `ui_kits/portal/{Header,Footer,Home,Tramites,ReclamoForm,Educa,Icon}.jsx` | `_ds_bundle.js` del repo |
 | `ui_kits/portal/Motif.jsx` | `_ds_bundle.js` + `assets/backgrounds/cmf-fondo-oscuro-2026.jpg` (subido por la usuaria) |
 | `readme.md` (fundamentos de contenido, visuales, iconografía) | `readme.md` del repo |
-| `assets/backgrounds/cmf-fondo-{claro,oscuro}-2026.jpg` | Subidos por la usuaria (no están en el repo) |
+| `assets/backgrounds/cmf-fondo-{claro,oscuro}-2026.jpg` | Subidos por la usuaria |
 | `assets/backgrounds/pptx-*` | Extraídos de `guidelines/CMF-plantilla-2026.pptx` |
 | `slides/*.html`, `guidelines/cards/*.html`, `templates/portal/` | Nuevos en este proyecto |

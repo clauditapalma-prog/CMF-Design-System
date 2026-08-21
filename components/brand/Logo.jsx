@@ -11,7 +11,8 @@
 const ARCHIVOS = {
   // fondo -> { conClaim, sinClaim, vertical }
   claro: {
-    conClaim: 'assets/logos/logo-CMF-color-claim.png',
+    // El SVG es la mejor opción en web: vectorial y con claim.
+    conClaim: 'assets/logos/logo-cmf-color-claim.svg',
     sinClaim: 'assets/logos/logo-CMF-color-horizontal.png',
     vertical: 'assets/logos/logo-CMF-color-vertical.jpg',
   },

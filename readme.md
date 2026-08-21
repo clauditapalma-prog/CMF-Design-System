@@ -29,7 +29,12 @@ Referencias citadas por el codebase pero **no incluidas en él** (ver *Faltantes
 ### Faltantes (bloqueos conocidos)
 
 1. **Fondos oficiales 2026 — ✅ recibidos.** `assets/backgrounds/cmf-fondo-claro-2026.jpg` y `cmf-fondo-oscuro-2026.jpg` son los masters institucionales entregados por el usuario: círculos concéntricos, franjas diagonales y tramas de puntos sobre blanco azulado o navy profundo. **Traen el logo, `www.cmfchile.cl` y los iconos de redes incrustados** — nunca superpongas otro logo. Los usan `slides/title-oficial-2026.html`, `slides/content-oficial-claro.html` y `ui_kits/portal/Motif.jsx`. El tratamiento de bloques diagonales 2024 se conserva en `slides/title`, `section` y `closing` para cortes de sección con más energía.
-2. **Manual y plantilla — ✅ recibidos, pendientes de extracción.** `guidelines/Manual-uso-CMF-breve-2026.pdf` y `guidelines/CMF-plantilla-2026.pptx` están en el proyecto pero **aún no fueron leídos página por página**: los tokens y reglas actuales siguen viniendo del readme previo y de `LOGOS.md`. Pídeme la pasada de verificación contra el PDF (paleta exacta, página de iconografía, layouts del master) cuando quieras cerrar esa brecha.
+2. **Manual y plantilla — ✅ verificados.** El PDF (14 páginas) y el PPTX se leyeron completos.
+   - **Paleta confirmada exacta** (manual pág. 2, "composición cromática logo CMF"): Pantone 268 C `C80 M95 Y5 K0` `#5B2B82`; Pantone 2587 C `C65 M80 Y0 K0` `#8547AD`; Pantone 424 C `C0 M0 Y0 K70` `#717271`; gris oscuro `#575756`. Los cuatro coinciden con los tokens; los valores Pantone/CMYK quedaron anotados en `tokens/colors.css`.
+   - **Timbre de agua**: R204 G204 B204 = `#CCCCCC`, ahora token `--cmf-logo-timbre`.
+   - **Regla nueva**: el logo sin claim requiere **visto bueno de Comunicaciones** (pág. 5) — documentado en `LOGOS.md` y en `Logo.prompt.md`.
+   - **Paleta de apoyo gráfico**: el manual titula las páginas ("primera categoría", "segunda categoría", "colores complementarios", "colores para gráficos") pero **publica las muestras como gráfica sin texto**, así que navy / índigo / teal / teal suave siguen muestreados del PPTX oficial, no leídos del manual.
+   - **Página 12, iconografía: vista, no extraíble.** La usuaria aportó una captura, guardada en `assets/icons/manual-p12-iconografia-oficial.png` y visible en la tarjeta "Set oficial CMF". Los vectores no se pudieron sacar del PDF, así que Lucide sigue como sustitución — pero ahora la descripción del set real está documentada y el trazo de `Icon.jsx` se ajustó a 1.4 para parecerse. Falta pedir los SVG a Comunicaciones.
 3. **`--font-mono`** — la CMF no define una fuente monoespaciada de marca; el token usa el stack del sistema. Se usa sólo en folios de trámite.
 4. **Normativa, Estadísticas y Sala de prensa** en el portal: no había diseño de referencia, así que las pantallas quedan **intencionalmente vacías con nota explícita** en vez de inventarlas.
 
@@ -77,8 +82,12 @@ Cómo escribe la CMF — replica esta voz en cada componente, pantalla y diaposi
 ## Iconografía
 
 - **Set:** **Lucide** (https://lucide.dev) — línea, 24×24, trazo `1.75`, `currentColor`, extremos y uniones redondeados. Un subconjunto curado de 21 glifos vive en `ui_kits/portal/Icon.jsx` (`<Icon name="…" />`); ver la tarjeta "Set de iconos (Lucide)".
-- **Sustitución declarada:** la página de iconografía del manual ("iconografías habituales en piezas gráficas CMF") no pudo extraerse de las fuentes. Lucide se eligió por su línea humanista y calma, adecuada para un regulador público. **Reemplázalo por el set oficial si está disponible.**
-- No hay fuente de iconos propia, ni sprite, ni PNGs de icono en las fuentes entregadas: todos los glifos son SVG en línea desde `Icon.jsx`.
+- **El set oficial: ~120 iconos, y así se ven.** Referencia en `assets/icons/manual-p12-iconografia-oficial.png` (manual pág. 12) y en la tarjeta "Set oficial CMF". Sus rasgos, para replicarlos o para evaluar cualquier reemplazo:
+  - **Trazo fino, ~1,25–1,5** sobre grilla de 24px — bastante más liviano que el default de Lucide (1.75). Extremos y uniones redondeados, sin relleno.
+  - **Glifo compuesto** como motivo dominante: un objeto principal más una insignia pequeña superpuesta — escudo con ✓, moneda con $, paraguas sobre auto, casa con llama. Esa composición es la firma visual del set, más que los glifos sueltos.
+  - **Dominios**: seguros (vida, hogar, auto, salud, incendio, inundación, viaje, dental, mascotas), banca y pagos (tarjeta, POS, ATM, transferencias, billetera), ahorro e inversión (alcancía, caja fuerte, gráficos, objetivos), trámites y legal (mazo, certificado, firma, póliza), y atención de usuarios (headset, personas, accesibilidad, 24h).
+- **Sustitución declarada:** los vectores no se pudieron extraer del PDF, así que `Icon.jsx` usa **Lucide** con el trazo bajado a **1.4** para acercarse a la línea del set real. **Es temporal: pide los SVG oficiales a `AreaComunicacionCMF@cmfchile.cl`.**
+- No hay fuente de iconos propia, ni sprite, ni SVGs sueltos en las fuentes entregadas: todos los glifos son SVG en línea desde `Icon.jsx`. El único activo de iconografía es la hoja de referencia PNG del manual.
 - **Uso:** los iconos apoyan la comprensión, nunca decoran. En los tiles de servicios se ubican en un chip redondeado de 44–48px con fondo morado suave (o teal, en CMF Educa). De un solo color, ajustado al contexto (`--color-brand` sobre claro, blanco sobre oscuro).
 - **Sin emoji**, sin iconos multicolor o 3D, sin mezclar estilo relleno con el set de línea.
 - **Unicode/símbolos:** flechas (→) y chevrones son aceptables en línea; el desplegable usa ▼; comillas tipográficas reales ("…").
@@ -94,9 +103,11 @@ Cómo escribe la CMF — replica esta voz en cada componente, pantalla y diaposi
 
 **`tokens/`** — `fonts.css`, `colors.css`, `typography.css`, `spacing.css`, `base.css`. `fonts.css` sirve Source Sans 3 desde **`fonts/`** (autohospedada, sin CDN externo: el despliegue es interno). Es variable, así que un archivo por subconjunto cubre los pesos 200-900.
 
+**`assets/icons/`** — `manual-p12-iconografia-oficial.png`, la hoja de referencia del set oficial (imagen, no vectores).
+
 **`assets/backgrounds/`** — los dos masters oficiales 2026 (claro y oscuro). **`guidelines/`** — el manual de marca en PDF y la plantilla PPTX oficiales, más las tarjetas de especímenes.
 
-**`assets/logos/`** — las nueve variantes oficiales + el SVG blanco vectorial. Reglas: `assets/logos/LOGOS.md`.
+**`assets/logos/`** — las nueve variantes oficiales, **los dos vectoriales** (`logo-cmf-blanco.svg` para fondo oscuro, `logo-cmf-color-claim.svg` para fondo claro, extraído del `.ai` original) y el propio `logoCMF.ai.pdf`. Reglas y procedencia: `assets/logos/LOGOS.md`. **Ojo:** las tres variantes verticales son miniaturas de ~128×120 px — no las uses por sobre 60px de alto; en web van los vectoriales.
 
 **`components/`** — primitivos React reutilizables (cada uno `.jsx` + `.d.ts` + `.prompt.md`, con una tarjeta `*.card.html` por carpeta):
 - `brand/` — **Logo**

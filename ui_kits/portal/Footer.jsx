@@ -16,7 +16,8 @@ export function Footer() {
       <div style={{ background: 'var(--cmf-navy)', color: 'rgba(255,255,255,.82)' }}>
         <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '48px 24px 36px', display: 'grid', gridTemplateColumns: '1.4fr repeat(4, 1fr)', gap: 32 }}>
           <div>
-            <img src="../../assets/logos/logo-CMF-blanco-vertical.png" alt="CMF" style={{ height: 92, marginBottom: 16 }} />
+            {/* Vectorial: el PNG vertical oficial solo existe a 128×120 y se ve borroso sobre ~60px. */}
+            <img src="../../assets/logos/logo-cmf-blanco.svg" alt="CMF" style={{ height: 54, marginBottom: 18 }} />
             <p style={{ fontSize: 'var(--fs-sm)', lineHeight: 'var(--lh-snug)', margin: 0, maxWidth: 240 }}>
               Av. Libertador Bernardo O'Higgins 1449, Santiago, Chile.
             </p>
