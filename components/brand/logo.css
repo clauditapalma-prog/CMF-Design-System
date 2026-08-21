@@ -1,0 +1,35 @@
+/* ============================================================
+   CMF — Logo
+   Reglas y archivos: ../../assets/logos/LOGOS.md
+
+   El manual prohíbe alterar el color del logo, así que aquí NO hay filtros,
+   invert, mix-blend-mode ni currentColor: cada fondo usa su archivo oficial.
+   Solo se controlan tamaño y espacio de protección.
+   ============================================================ */
+
+:root {
+  /* Alturas del lockup. El claim deja de ser legible bajo ~28px de alto. */
+  --cmf-logo-alto-sm: 28px;
+  --cmf-logo-alto-md: 34px;
+  --cmf-logo-alto-lg: 48px;
+}
+
+.cmf-logo {
+  display: block;
+  width: auto;
+  /* Espacio de protección ≈ la altura de la "F". En el lockup horizontal la
+     "F" mide cerca de 0,55 de la altura total del archivo. Convención de este
+     sistema: el manual resumido no publica una medida. */
+  padding-block: calc(var(--cmf-logo-alto, 34px) * 0.55);
+  height: var(--cmf-logo-alto, 34px);
+  box-sizing: content-box;
+}
+
+/* Escalas sugeridas. Por debajo de sm corresponde la variante sin claim. */
+.cmf-logo--sm { height: var(--cmf-logo-alto-sm); padding-block: calc(var(--cmf-logo-alto-sm) * 0.55); }
+.cmf-logo--md { height: var(--cmf-logo-alto-md); padding-block: calc(var(--cmf-logo-alto-md) * 0.55); }
+.cmf-logo--lg { height: var(--cmf-logo-alto-lg); padding-block: calc(var(--cmf-logo-alto-lg) * 0.55); }
+
+/* Cuando el logo va dentro de una barra que ya aporta su propio aire, el
+   espacio de protección lo da el contenedor y no hace falta duplicarlo. */
+.cmf-logo--sin-margen { padding-block: 0; }

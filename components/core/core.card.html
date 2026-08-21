@@ -1,0 +1,55 @@
+<!-- @dsCard group="Componentes" viewport="700x540" name="Base — Botones, Insignias, Tarjeta, Alerta" subtitle="Acciones, etiquetas de estado, superficies y mensajes" -->
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{background:var(--surface-page);margin:0;padding:20px;font-family:var(--font-sans)}.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}.lbl{font-size:var(--fs-xs);font-weight:700;letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--color-brand-soft);margin:0 0 8px}a{color:var(--text-link)}a:hover{color:var(--text-link-hover)}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { Button, Badge, Card, Alert } = window.CMFDesignSystem_87b826;
+const App = () => (
+  <div>
+    <p className="lbl">Botones — variantes y tamaños</p>
+    <div className="row">
+      <Button variant="primary">Continuar</Button>
+      <Button variant="secondary">Ver registro</Button>
+      <Button variant="ghost">Cancelar</Button>
+      <Button variant="accent">Abrir simulador</Button>
+      <Button variant="danger">Eliminar</Button>
+      <Button variant="primary" disabled>Deshabilitado</Button>
+    </div>
+    <div className="row">
+      <Button size="sm">Pequeño 34</Button>
+      <Button size="md">Medio 42</Button>
+      <Button size="lg">Grande 50</Button>
+    </div>
+    <p className="lbl">Insignias</p>
+    <div className="row">
+      <Badge tone="brand" subtle>Normativa</Badge>
+      <Badge tone="navy" subtle>Comunicado</Badge>
+      <Badge tone="accent" subtle>Educación</Badge>
+      <Badge tone="success" subtle dot>En línea</Badge>
+      <Badge tone="warning" subtle>Con clave</Badge>
+      <Badge tone="danger" subtle>Suspendida</Badge>
+      <Badge tone="neutral" subtle>Histórico</Badge>
+      <Badge tone="brand">Plena</Badge>
+    </div>
+    <p className="lbl">Tarjetas</p>
+    <div className="row" style={{alignItems:'stretch'}}>
+      <Card style={{width:210}}><strong style={{color:'var(--text-strong)'}}>Tarjeta base</strong><p style={{margin:'6px 0 0',fontSize:'var(--fs-sm)',color:'var(--text-muted)'}}>Blanca, borde 1px, sombra sm, radio 8px.</p></Card>
+      <Card accent interactive style={{width:210}}><strong style={{color:'var(--text-strong)'}}>Con acento</strong><p style={{margin:'6px 0 0',fontSize:'var(--fs-sm)',color:'var(--text-muted)'}}>Regla morada de 4px; se eleva al hover.</p></Card>
+      <Card accent accentColor="var(--color-accent)" interactive style={{width:210}}><strong style={{color:'var(--text-strong)'}}>Acento teal</strong><p style={{margin:'6px 0 0',fontSize:'var(--fs-sm)',color:'var(--text-muted)'}}>Contextos de educación financiera.</p></Card>
+    </div>
+    <p className="lbl">Alertas</p>
+    <div style={{display:'grid',gap:10}}>
+      <Alert tone="info">Tus datos están protegidos conforme a la normativa vigente.</Alert>
+      <Alert tone="warning" title="Antes de enviar">Revisa que la información sea correcta.</Alert>
+      <Alert tone="danger" onClose={() => {}}>No pudimos validar el RUT ingresado.</Alert>
+    </div>
+  </div>
+);
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script></body></html>

@@ -1,0 +1,33 @@
+{
+  "name": "cmf-design-system",
+  "version": "1.0.0",
+  "description": "Sistema de diseño de la Comisión para el Mercado Financiero (CMF) — tokens, componentes React, UI kit del portal y plantillas de diapositivas.",
+  "license": "UNLICENSED",
+  "private": false,
+  "main": "_ds_bundle.js",
+  "style": "styles.css",
+  "exports": {
+    ".": "./_ds_bundle.js",
+    "./styles.css": "./styles.css",
+    "./tokens/*": "./tokens/*",
+    "./assets/*": "./assets/*"
+  },
+  "files": [
+    "styles.css",
+    "_ds_bundle.js",
+    "_ds_manifest.json",
+    "tokens",
+    "fonts",
+    "assets",
+    "components",
+    "ui_kits",
+    "slides",
+    "guidelines",
+    "templates",
+    "readme.md",
+    "SKILL.md"
+  ],
+  "sideEffects": [
+    "*.css"
+  ]
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Portal CMF" description="Página del portal público: cabecera institucional, hero, accesos ciudadanos, franjas de audiencia y actualidad." -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div ref="{{ raizRef }}" style="font-family:var(--font-sans);background:var(--surface-page);min-height:100vh">
+<sc-if value="{{ barraGobierno }}" hint-placeholder-val="{{ true }}">
+<x-import component-from-global-scope="CMFDesignSystem_87b826.Header" active="Inicio" hint-size="100%,172px"></x-import>
+</sc-if>
+<sc-if value="{{ sinBarraGobierno }}" hint-placeholder-val="{{ false }}">
+<div style="background:var(--surface-card);border-bottom:1px solid var(--border-subtle);padding:18px 0"><div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between"><img src="../../assets/logos/logo-CMF-color-claim.png" alt="Comisión para el Mercado Financiero" style="height:52px"><span style="font-size:13px;color:var(--text-muted)">600 831 0000</span></div></div>
+</sc-if>
+<section style="position:relative;overflow:hidden;background:var(--cmf-navy)">
+<div aria-hidden="true" style="position:absolute;inset:0;background-image:var(--tw-hero-img,url('../../assets/backgrounds/cmf-fondo-oscuro-2026.jpg'));background-size:cover;background-position:center"></div>
+<div style="position:relative;max-width:1200px;margin:0 auto;padding:88px 24px 104px">
+<div style="max-width:640px">
+<span style="font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tw-hero-antetitulo,var(--cmf-teal-200))">Regulador y supervisor financiero de Chile</span>
+<h1 style="font-size:39px;line-height:1.1;margin:16px 0 12px;max-width:560px;color:var(--tw-hero-tinta,#ffffff)">Un mercado financiero seguro, transparente y estable</h1>
+<p style="font-size:18px;line-height:1.35;margin:0 0 28px;max-width:520px;color:var(--tw-hero-suave,rgba(255,255,255,.85))">Regulamos y supervisamos a las instituciones financieras para proteger a los usuarios y resguardar la fe pública.</p>
+<div style="display:flex;background:#fff;border-radius:8px;box-shadow:0 12px 28px rgba(44,44,43,.18);padding:6px;max-width:560px">
+<input placeholder="Busca trámites, normativa o entidades…" style="flex:1;border:0;outline:none;padding:12px 16px;font-family:var(--font-sans);font-size:16px;color:var(--text-strong)">
+<x-import component-from-global-scope="CMFDesignSystem_87b826.Button" variant="primary" hint-size="96px,42px">Buscar</x-import>
+</div>
+</div>
+</div>
+</section>
+<section style="max-width:1200px;margin:-52px auto 0;padding:0 24px;position:relative;z-index:2;display:grid;gap:16px;grid-template-columns:repeat(var(--tw-cols,3),1fr)">
+<x-import component-from-global-scope="CMFDesignSystem_87b826.Card" interactive="{{ true }}" hint-size="100%,104px"><div style="display:flex;align-items:flex-start;gap:14px"><span style="width:46px;height:46px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--tw-acento-tinte,var(--color-brand-tint))"><x-import component-from-global-scope="CMFDesignSystem_87b826.Icon" name="fileText" size="24" color="{{ acento }}" hint-size="24px,24px"></x-import></span><div><h4 style="margin:0;font-size:16px;color:var(--text-strong)">Presentar un reclamo</h4><p style="margin:4px 0 0;font-size:14px;color:var(--text-muted);line-height:1.3">Reclamos contra entidades fiscalizadas.</p></div></div></x-import>
+<x-import component-from-global-scope="CMFDesignSystem_87b826.Card" interactive="{{ true }}" hint-size="100%,104px"><div style="display:flex;align-items:flex-start;gap:14px"><span style="width:46px;height:46px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--tw-acento-tinte,var(--color-brand-tint))"><x-import component-from-global-scope="CMFDesignSystem_87b826.Icon" name="search2" size="24" color="{{ acento }}" hint-size="24px,24px"></x-import></span><div><h4 style="margin:0;font-size:16px;color:var(--text-strong)">Conoce tu deuda</h4><p style="margin:4px 0 0;font-size:14px;color:var(--text-muted);line-height:1.3">Consulta tu informe consolidado de deudas.</p></div></div></x-import>
+<x-import component-from-global-scope="CMFDesignSystem_87b826.Card" interactive="{{ true }}" hint-size="100%,104px"><div style="display:flex;align-items:flex-start;gap:14px"><span style="width:46px;height:46px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--tw-acento-tinte,var(--color-brand-tint))"><x-import component-from-global-scope="CMFDesignSystem_87b826.Icon" name="shield" size="24" color="{{ acento }}" hint-size="24px,24px"></x-import></span><div><h4 style="margin:0;font-size:16px;color:var(--text-strong)">Alertas ciudadanas</h4><p style="margin:4px 0 0;font-size:14px;color:var(--text-muted);line-height:1.3">Verifica entidades y evita estafas.</p></div></div></x-import>
+<x-import component-from-global-scope="CMFDesignSystem_87b826.Card" interactive="{{ true }}" hint-size="100%,104px"><div style="display:flex;align-items:flex-start;gap:14px"><span style="width:46px;height:46px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--tw-acento-tinte,var(--color-brand-tint))"><x-import component-from-global-scope="CMFDesignSystem_87b826.Icon" name="scale" size="24" color="{{ acento }}" hint-size="24px,24px"></x-import></span><div><h4 style="margin:0;font-size:16px;color:var(--text-strong)">Conoce tus seguros</h4><p style="margin:4px 0 0;font-size:14px;color:var(--text-muted);line-height:1.3">Pólizas contratadas a tu nombre.</p></div></div></x-import>
+<x-import component-from-global-scope="CMFDesignSystem_87b826.Card" interactive="{{ true }}" hint-size="100%,104px"><div style="display:flex;align-items:flex-start;gap:14px"><span style="width:46px;height:46px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--tw-acento-tinte,var(--color-brand-tint))"><x-import component-from-global-scope="CMFDesignSystem_87b826.Icon" name="building" size="24" color="{{ acento }}" hint-size="24px,24px"></x-import></span><div><h4 style="margin:0;font-size:16px;color:var(--text-strong)">Entidades supervisadas</h4><p style="margin:4px 0 0;font-size:14px;color:var(--text-muted);line-height:1.3">Buscador de entidades y registros.</p></div></div></x-import>
+<x-import component-from-global-scope="CMFDesignSystem_87b826.Card" interactive="{{ true }}" hint-size="100%,104px"><div style="display:flex;align-items:flex-start;gap:14px"><span style="width:46px;height:46px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--tw-acento-tinte,var(--color-brand-tint))"><x-import component-from-global-scope="CMFDesignSystem_87b826.Icon" name="graduation" size="24" color="{{ acento }}" hint-size="24px,24px"></x-import></span><div><h4 style="margin:0;font-size:16px;color:var(--text-strong)">Educación e inclusión</h4><p style="margin:4px 0 0;font-size:14px;color:var(--text-muted);line-height:1.3">Accede a CMF Educa y sus campañas.</p></div></div></x-import>
+</section>
+<sc-if value="{{ franjas }}" hint-placeholder-val="{{ true }}">
+<section style="max-width:1200px;margin:48px auto 0;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div style="background:var(--cmf-navy);border-radius:8px;padding:32px 30px">
+<h3 style="margin:0 0 18px;font-size:22px;color:#fff">Si eres ciudadano…</h3>
+<div style="display:flex;flex-direction:column;gap:14px">
+<a style="color:var(--cmf-teal-200);font-size:15px;font-weight:600;text-decoration:none">¿Sabes cuánto debes? → Conoce tu deuda</a>
+<a style="color:var(--cmf-teal-200);font-size:15px;font-weight:600;text-decoration:none">¿Tienes que hacer un trámite? → Atención en línea</a>
+<a style="color:var(--cmf-teal-200);font-size:15px;font-weight:600;text-decoration:none">¿Tienes dinero no cobrado? → Acreencias bancarias</a>
+</div>
+</div>
+<div style="background:var(--cmf-ink-100);border-radius:8px;padding:32px 30px">
+<h3 style="margin:0 0 18px;font-size:22px;color:var(--text-strong)">Si eres supervisado…</h3>
+<div style="display:flex;flex-direction:column;gap:14px">
+<a style="font-size:15px;font-weight:600;text-decoration:none;color:var(--tw-acento,var(--color-brand))">¿Quieres reportar información a la CMF? → CMF Supervisa</a>
+<a style="font-size:15px;font-weight:600;text-decoration:none;color:var(--tw-acento,var(--color-brand))">¿Necesitas revisar plazos de entrega? → Calendario de plazos</a>
+<a style="font-size:15px;font-weight:600;text-decoration:none;color:var(--tw-acento,var(--color-brand))">¿Inscribirte bajo la Ley Fintec? → Registro RPSF</a>
+</div>
+</div>
+</section>
+</sc-if>
+<sc-if value="{{ actualidad }}" hint-placeholder-val="{{ true }}">
+<section style="max-width:1200px;margin:48px auto 0;padding:0 24px">
+<hr style="height:4px;width:56px;border:0;border-radius:999px;margin:0 0 12px;background:var(--tw-acento,var(--color-brand))">
+<h2 style="margin:0 0 20px;font-size:31px;color:var(--text-strong)">Actualidad</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+<x-import component-from-global-scope="CMFDesignSystem_87b826.Card" interactive="{{ true }}" hint-size="100%,180px"><x-import component-from-global-scope="CMFDesignSystem_87b826.Badge" tone="brand" subtle="{{ true }}" hint-size="80px,22px">Comunicado</x-import><h4 style="margin:12px 0 8px;font-size:18px;line-height:1.25;color:var(--text-strong)">CMF publica normativa sobre recálculo de pensiones en rentas vitalicias</h4><p style="margin:0;font-size:14px;color:var(--text-muted);line-height:1.3">La normativa contempla un ajuste relacionado con la Ley N°21.818.</p></x-import>
+<x-import component-from-global-scope="CMFDesignSystem_87b826.Card" interactive="{{ true }}" hint-size="100%,180px"><x-import component-from-global-scope="CMFDesignSystem_87b826.Badge" tone="accent" subtle="{{ true }}" hint-size="80px,22px">Educación</x-import><h4 style="margin:12px 0 8px;font-size:18px;line-height:1.25;color:var(--text-strong)">Campaña de educación financiera para personas mayores junto a SENAMA</h4><p style="margin:0;font-size:14px;color:var(--text-muted);line-height:1.3">"Cuidemos Nuestro Dinero" llegará a clubes de personas mayores de todo el país.</p></x-import>
+<x-import component-from-global-scope="CMFDesignSystem_87b826.Card" interactive="{{ true }}" hint-size="100%,180px"><x-import component-from-global-scope="CMFDesignSystem_87b826.Badge" tone="navy" subtle="{{ true }}" hint-size="80px,22px">Presentaciones</x-import><h4 style="margin:12px 0 8px;font-size:18px;line-height:1.25;color:var(--text-strong)">El mercado financiero y su regulación: Agenda CMF</h4><p style="margin:0;font-size:14px;color:var(--text-muted);line-height:1.3">Presentación de la Presidenta de la CMF en un seminario del sector.</p></x-import>
+</div>
+</section>
+</sc-if>
+<x-import component-from-global-scope="CMFDesignSystem_87b826.Footer" hint-size="100%,360px"></x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;fondoHero&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Oficial oscuro&quot;,&quot;Oficial claro&quot;,&quot;Navy plano&quot;],&quot;default&quot;:&quot;Oficial oscuro&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Portada&quot;,&quot;label&quot;:&quot;Fondo del hero&quot;},&quot;acento&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;options&quot;:[&quot;#5b2b82&quot;,&quot;#12a095&quot;,&quot;#162d56&quot;],&quot;default&quot;:&quot;#5b2b82&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Portada&quot;,&quot;label&quot;:&quot;Color de acento&quot;},&quot;serviciosPorFila&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;min&quot;:2,&quot;max&quot;:4,&quot;step&quot;:1,&quot;default&quot;:3,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Accesos&quot;,&quot;label&quot;:&quot;Accesos por fila&quot;},&quot;barraGobierno&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Cabecera&quot;,&quot;label&quot;:&quot;Cabecera institucional completa&quot;},&quot;franjasAudiencia&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Secciones&quot;,&quot;label&quot;:&quot;Franjas ciudadano / supervisado&quot;},&quot;mostrarActualidad&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Secciones&quot;,&quot;label&quot;:&quot;Sección Actualidad&quot;}}">
+// Los tweaks se aplican como custom properties en el div raíz: así cada estilo
+// del template queda literal (pinta de inmediato con su valor por defecto) y
+// sólo el contenedor recibe las anulaciones.
+const FONDOS = {
+  'Oficial oscuro': { img: "url('../../assets/backgrounds/cmf-fondo-oscuro-2026.jpg')", tinta: '#ffffff', suave: 'rgba(255,255,255,.85)', antetitulo: 'var(--cmf-teal-200)' },
+  'Oficial claro': { img: "url('../../assets/backgrounds/cmf-fondo-claro-2026.jpg')", tinta: 'var(--cmf-navy)', suave: 'var(--text-body)', antetitulo: 'var(--color-brand)' },
+  'Navy plano': { img: 'none', tinta: '#ffffff', suave: 'rgba(255,255,255,.85)', antetitulo: 'var(--cmf-teal-200)' },
+};
+
+const ACENTOS = {
+  '#5b2b82': 'var(--color-brand-tint)',
+  '#12a095': 'var(--cmf-teal-50)',
+  '#162d56': 'var(--cmf-info-bg)',
+};
+
+class Component extends DCLogic {
+  raiz = React.createRef();
+
+  // Las anulaciones de los tweaks se escriben como custom properties sobre el
+  // div raíz DESPUÉS del render, para que ningún atributo style del template
+  // dependa de un hole (y todo pinte con su valor por defecto desde el primer
+  // carácter transmitido).
+  aplicarTweaks() {
+    const el = this.raiz.current;
+    if (!el) return;
+    const fondo = FONDOS[this.props.fondoHero] || FONDOS['Oficial oscuro'];
+    const acento = (this.props.acento || '#5b2b82').toLowerCase();
+    const vars = {
+      '--tw-hero-img': fondo.img,
+      '--tw-hero-tinta': fondo.tinta,
+      '--tw-hero-suave': fondo.suave,
+      '--tw-hero-antetitulo': fondo.antetitulo,
+      '--tw-acento': acento,
+      '--tw-acento-tinte': ACENTOS[acento] || 'var(--color-brand-tint)',
+      '--tw-cols': String(Math.min(4, Math.max(2, this.props.serviciosPorFila ?? 3))),
+    };
+    for (const k in vars) el.style.setProperty(k, vars[k]);
+  }
+
+  componentDidMount() { this.aplicarTweaks(); }
+  componentDidUpdate() { this.aplicarTweaks(); }
+
+  renderVals() {
+    const barra = this.props.barraGobierno ?? true;
+    return {
+      raizRef: this.raiz,
+      acento: (this.props.acento || '#5b2b82').toLowerCase(),
+      barraGobierno: barra,
+      sinBarraGobierno: !barra,
+      franjas: this.props.franjasAudiencia ?? true,
+      actualidad: this.props.mostrarActualidad ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>
