@@ -7,4 +7,6 @@
 @import url("tokens/typography.css");
 @import url("tokens/spacing.css");
 @import url("tokens/base.css");
+@import url("tokens/icons-light.css");
+@import url("tokens/icons-bold.css");
 @import url("components/brand/logo.css");

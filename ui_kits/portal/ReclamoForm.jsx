@@ -50,7 +50,7 @@ export function ReclamoForm({ onBack }) {
           {done ? (
             <div style={{ textAlign: 'center', padding: '20px 0' }}>
               <span style={{ width: 64, height: 64, borderRadius: '50%', background: 'var(--cmf-success-bg)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16 }}>
-                <Icon name="check" size={34} color="var(--cmf-success)" strokeWidth={2.2} />
+                <Icon name="check" size={34} color="var(--cmf-success)" peso="bold" />
               </span>
               <h3 style={{ margin: '0 0 8px' }}>Reclamo ingresado</h3>
               <p style={{ margin: '0 0 4px', color: 'var(--text-muted)' }}>Folio de seguimiento</p>

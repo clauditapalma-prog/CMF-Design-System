@@ -38,8 +38,8 @@
         "message": "Raw px value — use a design-system spacing token via var()."
       },
       {
-        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Source Sans 3))/i]",
-        "message": "Font not provided by the design system. Available: Source Sans 3."
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Source Sans 3|Phosphor-Light|Phosphor-Bold))/i]",
+        "message": "Font not provided by the design system. Available: Source Sans 3, Phosphor-Light, Phosphor-Bold."
       },
       {
         "selector": "JSXOpeningElement[name.name='Alert'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tone|title|onClose|style|key|ref|className|style|children)$/]",
@@ -399,6 +399,8 @@
       "--cmf-logo-alto-lg": "spacing"
     },
     "fontFamilies": [
+      "Phosphor-Bold",
+      "Phosphor-Light",
       "Source Sans 3"
     ]
   }

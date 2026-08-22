@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"CMFDesignSystem_87b826","components":[{"name":"Logo","sourcePath":"components/brand/Logo.jsx"},{"name":"Alert","sourcePath":"components/core/Alert.jsx"},{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Breadcrumb","sourcePath":"components/navigation/Breadcrumb.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"Educa","sourcePath":"ui_kits/portal/Educa.jsx"},{"name":"Footer","sourcePath":"ui_kits/portal/Footer.jsx"},{"name":"Header","sourcePath":"ui_kits/portal/Header.jsx"},{"name":"Home","sourcePath":"ui_kits/portal/Home.jsx"},{"name":"Icon","sourcePath":"ui_kits/portal/Icon.jsx"},{"name":"Motif","sourcePath":"ui_kits/portal/Motif.jsx"},{"name":"ReclamoForm","sourcePath":"ui_kits/portal/ReclamoForm.jsx"},{"name":"Tramites","sourcePath":"ui_kits/portal/Tramites.jsx"}],"sourceHashes":{"components/brand/Logo.jsx":"9777e26d7751","components/core/Alert.jsx":"41bac65e8aeb","components/core/Badge.jsx":"2f2af86d7f45","components/core/Button.jsx":"6d5927f3f7ba","components/core/Card.jsx":"ace400d36d26","components/forms/Checkbox.jsx":"f018c2276e7b","components/forms/Input.jsx":"b8d66aa3b199","components/forms/Select.jsx":"dfffdb079a79","components/navigation/Breadcrumb.jsx":"bbbc1d2e2a1c","components/navigation/Tabs.jsx":"c61121b4a145","ui_kits/portal/Educa.jsx":"be9f438cb151","ui_kits/portal/Footer.jsx":"ec650ddd257a","ui_kits/portal/Header.jsx":"d96e077ffb83","ui_kits/portal/Home.jsx":"6247705c4225","ui_kits/portal/Icon.jsx":"65d640702e95","ui_kits/portal/Motif.jsx":"75f4393fd5c4","ui_kits/portal/ReclamoForm.jsx":"6e13579b09fc","ui_kits/portal/Tramites.jsx":"1525a8d87046"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"CMFDesignSystem_87b826","components":[{"name":"Logo","sourcePath":"components/brand/Logo.jsx"},{"name":"Alert","sourcePath":"components/core/Alert.jsx"},{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Breadcrumb","sourcePath":"components/navigation/Breadcrumb.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"Educa","sourcePath":"ui_kits/portal/Educa.jsx"},{"name":"Footer","sourcePath":"ui_kits/portal/Footer.jsx"},{"name":"Header","sourcePath":"ui_kits/portal/Header.jsx"},{"name":"Home","sourcePath":"ui_kits/portal/Home.jsx"},{"name":"Icon","sourcePath":"ui_kits/portal/Icon.jsx"},{"name":"Motif","sourcePath":"ui_kits/portal/Motif.jsx"},{"name":"ReclamoForm","sourcePath":"ui_kits/portal/ReclamoForm.jsx"},{"name":"Tramites","sourcePath":"ui_kits/portal/Tramites.jsx"}],"sourceHashes":{"components/brand/Logo.jsx":"9777e26d7751","components/core/Alert.jsx":"41bac65e8aeb","components/core/Badge.jsx":"2f2af86d7f45","components/core/Button.jsx":"6d5927f3f7ba","components/core/Card.jsx":"ace400d36d26","components/forms/Checkbox.jsx":"f018c2276e7b","components/forms/Input.jsx":"b8d66aa3b199","components/forms/Select.jsx":"dfffdb079a79","components/navigation/Breadcrumb.jsx":"bbbc1d2e2a1c","components/navigation/Tabs.jsx":"c61121b4a145","ui_kits/portal/Educa.jsx":"be9f438cb151","ui_kits/portal/Footer.jsx":"ec650ddd257a","ui_kits/portal/Header.jsx":"d96e077ffb83","ui_kits/portal/Home.jsx":"6247705c4225","ui_kits/portal/Icon.jsx":"dac557303a5a","ui_kits/portal/Motif.jsx":"75f4393fd5c4","ui_kits/portal/ReclamoForm.jsx":"258e5f3ed6ca","ui_kits/portal/Tramites.jsx":"1525a8d87046"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -810,144 +810,86 @@ Object.assign(__ds_scope, { Tabs });
 // ui_kits/portal/Icon.jsx
 try { (() => {
 /**
- * CMF icon set — curated Lucide (https://lucide.dev) outline glyphs.
- * 24×24, currentColor, rounded caps/joins.
+ * CMF icon set — **Phosphor Icons**, peso Light (https://phosphoricons.com).
+ * Se sirve como webfont; `name` mantiene la API interna del sistema y se
+ * traduce al nombre de Phosphor.
  *
- * SUBSTITUTION. The official set exists — manual pág. 12, reproducida en
- * assets/icons/manual-p12-iconografia-oficial.png — pero sus vectores no se
- * pudieron extraer del PDF. Lucide es el reemplazo temporal; el trazo por
- * defecto se bajó de 1.75 a 1.4 para acercarse a la línea fina del set real.
- * Reemplázalo cuando Comunicaciones entregue los SVG oficiales.
+ * DESPLIEGUE. La fuente está **autohospedada** en `fonts/phosphor/` y se
+ * declara en `tokens/icons-light.css` y `tokens/icons-bold.css`, ambos
+ * importados desde `styles.css`. No hay CDN: el despliegue interno de la CMF
+ * no tiene salida a internet, misma razón por la que Source Sans 3 vive en
+ * `fonts/`. Basta con enlazar `styles.css`.
+ *
+ * SUSTITUCIÓN DECLARADA. El set oficial de la CMF (manual pág. 12, reproducido
+ * en assets/icons/manual-p12-iconografia-oficial.png) vive como ilustraciones
+ * vectoriales dentro de la plantilla de imágenes de apoyo y se decidió no
+ * incorporarlo: son piezas gráficas temáticas, no iconos de interfaz.
+ * Phosphor Light se eligió por ser lo más cercano a la línea del manual —
+ * trazo ~1.25, esquinas redondeadas, buena cobertura financiera.
+ *
+ * Lo que Phosphor NO replica: el glifo compuesto (objeto + insignia pequeña
+ * superpuesta) que es la firma del set CMF. Ver ICONOGRAFÍA en el readme.
  */
-const P = {
-  search: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("circle", {
-    cx: "11",
-    cy: "11",
-    r: "7"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "m21 21-4.3-4.3"
-  })),
-  menu: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "M4 6h16M4 12h16M4 18h16"
-  })),
-  x: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "M18 6 6 18M6 6l12 12"
-  })),
-  chevronRight: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "m9 6 6 6-6 6"
-  })),
-  chevronDown: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "m6 9 6 6 6-6"
-  })),
-  arrowRight: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "M5 12h14M13 6l6 6-6 6"
-  })),
-  fileText: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M14 2v6h6M8 13h8M8 17h8M8 9h2"
-  })),
-  shield: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "m9 12 2 2 4-4"
-  })),
-  graduation: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "M22 10 12 5 2 10l10 5 10-5z"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M6 12v5c0 1 2.5 3 6 3s6-2 6-3v-5"
-  })),
-  alert: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M12 9v4M12 17h.01"
-  })),
-  phone: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"
-  })),
-  building: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("rect", {
-    x: "4",
-    y: "2",
-    width: "16",
-    height: "20",
-    rx: "1"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"
-  })),
-  chart: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "M3 3v18h18"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M7 16V11M12 16V7M17 16v-3"
-  })),
-  external: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "M15 3h6v6M10 14 21 3M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"
-  })),
-  bell: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9z"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M10.3 21a2 2 0 0 0 3.4 0"
-  })),
-  user: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("circle", {
-    cx: "12",
-    cy: "8",
-    r: "4"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M4 21v-1a7 7 0 0 1 14 0v1"
-  })),
-  scale: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "M12 3v18M7 21h10M5 7l-3 6a4 4 0 0 0 6 0L5 7zM19 7l-3 6a4 4 0 0 0 6 0l-3-6zM5 7h14M9 5l6-1"
-  })),
-  search2: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("circle", {
-    cx: "11",
-    cy: "11",
-    r: "7"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "m21 21-4.3-4.3"
-  })),
-  download: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "M12 3v12M7 11l5 5 5-5M5 21h14"
-  })),
-  globe: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("circle", {
-    cx: "12",
-    cy: "12",
-    r: "9"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"
-  })),
-  clock: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("circle", {
-    cx: "12",
-    cy: "12",
-    r: "9"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M12 7v5l3 2"
-  })),
-  check: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-    d: "m20 6-11 11-5-5"
-  }))
+// Sólo se autohospedaron los pesos light y bold. Añadir otro peso = copiar su
+// style.css y su .woff2 desde phosphor-icons/web y sumar el @import.
+const PESOS = {
+  light: 'ph-light',
+  bold: 'ph-bold'
 };
+const NOMBRES = {
+  search: "magnifying-glass",
+  search2: "magnifying-glass",
+  menu: "list",
+  x: "x",
+  chevronRight: "caret-right",
+  chevronDown: "caret-down",
+  arrowRight: "arrow-right",
+  fileText: "file-text",
+  shield: "shield-check",
+  graduation: "graduation-cap",
+  alert: "warning",
+  phone: "phone",
+  building: "buildings",
+  chart: "chart-bar",
+  external: "arrow-square-out",
+  bell: "bell",
+  user: "user",
+  scale: "scales",
+  download: "download-simple",
+  globe: "globe",
+  clock: "clock",
+  check: "check"
+};
+
+/**
+ * @param {'light'|'bold'} [peso] Light por defecto; `bold` para los pocos casos
+ *   de énfasis (confirmación de trámite, alertas).
+ */
 function Icon({
   name,
   size = 22,
   color = 'currentColor',
-  strokeWidth = 1.4,
+  peso = 'light',
   style
 }) {
-  return /*#__PURE__*/React.createElement("svg", {
-    width: size,
-    height: size,
-    viewBox: "0 0 24 24",
-    fill: "none",
-    stroke: color,
-    strokeWidth: strokeWidth,
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
+  const p = PESOS[peso] ? peso : 'light';
+  const glifo = NOMBRES[name] || name;
+  return /*#__PURE__*/React.createElement("i", {
+    className: PESOS[p] + ' ph-' + glifo,
+    "aria-hidden": "true",
     style: {
+      fontSize: size,
+      lineHeight: 1,
+      color,
       flexShrink: 0,
-      display: 'block',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: size,
+      height: size,
       ...style
-    },
-    "aria-hidden": "true"
-  }, P[name] || null);
+    }
+  });
 }
 Object.assign(__ds_scope, { Icon });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/portal/Icon.jsx", error: String((e && e.message) || e) }); }
@@ -1957,7 +1899,7 @@ function ReclamoForm({
     name: "check",
     size: 34,
     color: "var(--cmf-success)",
-    strokeWidth: 2.2
+    peso: "bold"
   })), /*#__PURE__*/React.createElement("h3", {
     style: {
       margin: '0 0 8px'

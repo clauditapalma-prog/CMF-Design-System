@@ -1,0 +1,26 @@
+<!-- @dsCard group="Iconografía" viewport="700x200" name="Set en uso — Phosphor Light" subtitle="Trazo ~1.25, esquinas redondeadas — el reemplazo más cercano a la línea del manual" -->
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0}body{font-family:var(--font-sans);background:var(--surface-card);padding:18px 20px}a{color:var(--text-link)}a:hover{color:var(--text-link-hover)}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { Icon } = window.CMFDesignSystem_87b826;
+const NAMES = ['search','menu','x','chevronRight','chevronDown','arrowRight','fileText','shield','graduation','alert','phone','building','chart','external','bell','user','scale','download','globe','clock','check'];
+const App = () => (
+  <div>
+    <div style={{display:'flex',flexWrap:'wrap',gap:14}}>
+      {NAMES.map(n => (
+        <span key={n} style={{width:44,height:44,borderRadius:'var(--radius-md)',background:'var(--color-brand-tint)',display:'inline-flex',alignItems:'center',justifyContent:'center'}} title={n}>
+          <Icon name={n} size={22} color="var(--color-brand)" />
+        </span>
+      ))}
+    </div>
+    <p style={{margin:'16px 0 0',fontSize:13,color:'var(--text-muted)',lineHeight:1.45}}>Chip morado suave de 44–46px con radio md es el envoltorio estándar en tiles de servicios; teal en CMF Educa. Un solo color, nunca relleno mezclado con línea, nunca emoji. <strong>Sustitución declarada</strong>: el set oficial de la CMF son ilustraciones temáticas para piezas gráficas, no iconos de interfaz — ver la tarjeta "Set oficial CMF".</p>
+  </div>
+);
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script></body></html>
