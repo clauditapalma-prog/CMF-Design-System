@@ -22,16 +22,18 @@ diapositivas y otro para las notas—, y PowerPoint no tolera que se compartan.
 **Qué se hizo.** El patrón de notas recibe `theme2.xml`, copia exacta del original con otro nombre
 para distinguirlos. Como es una copia, la gráfica es idéntica.
 
+**Y las propiedades del documento quedaron obsoletas.** `docProps/app.xml` describe qué contiene el
+archivo: cuántas diapositivas, con qué títulos, qué tema. PowerPoint compara esa declaración contra
+el contenido real. Al agregar el tema del patrón de notas, la declaración dejó de calzar. Ahora se
+reescribe al final del proceso, con los valores reales.
+
 ### Una advertencia para quien construya sobre esta plantilla
 
-Hay un segundo defecto de la misma familia que **no está en la plantilla** pero aparece en cuanto se
-la usa como base: las propiedades del documento —`docProps/app.xml`— declaran el número de
-diapositivas y sus títulos. En la plantilla son tres y hay tres, así que está bien. Pero si se
-quitan o agregan diapositivas por programa y no se actualizan esas propiedades, el archivo termina
-declarando tres diapositivas y conteniendo cuarenta, y PowerPoint pide repararlo.
-
-Si vas a generar presentaciones desde esta plantilla con herramientas como `python-pptx`, recuerda
-reescribir `docProps/app.xml` al guardar. `build/presentacion.py` de este proyecto lo hace.
+Es el mismo defecto que aparece en cuanto se genera una presentación desde la plantilla con
+herramientas como `python-pptx`: se agregan diapositivas pero las propiedades siguen declarando las
+tres de muestra, y PowerPoint pide reparar el archivo. Si vas a generar presentaciones por programa,
+**reescribe `docProps/app.xml` al guardar**. La función `reescribir_propiedades` de
+`build/presentacion.py` en este proyecto lo hace y sirve de referencia.
 
 ---
 
@@ -50,6 +52,21 @@ aparecen en el selector de diseño:
 | **CMF Sección** | Antetítulo y título | Separador entre bloques |
 | **CMF Contenido** | Antetítulo, título y cuatro viñetas | Lámina de trabajo |
 | **CMF En blanco** | — | Lámina con la marca, para componer libre |
+| **CMF Separador** | Número de bloque, antetítulo, título y bajada | Corte entre bloques, a sangre |
+
+### Sobre «CMF Separador»
+
+Es el único diseño que no se deriva de una diapositiva prototipo: se construyó nuevo. La razón es
+que `CMF Sección` comparte antetítulo, título y regla de acento con `CMF Contenido`, así que
+proyectado un separador se confunde con una lámina más. Este invierte el contraste —fondo
+institucional a sangre, tipografía en blanco y el número del bloque como marca de agua— para que el
+corte se lea desde el fondo de la sala.
+
+**Se agrega, no reemplaza.** `CMF Sección` se conserva tal cual: cambiarlo rompería las
+presentaciones que ya lo usan.
+
+El número del bloque es un marcador que se escribe a mano —`01`, `02`—, no un campo automático:
+PowerPoint no tiene un contador de secciones. La bajada es opcional; si se deja vacía, desaparece.
 
 Las cajas de texto se redimensionaron a la banda de contenido de la marca —de 1,00" a 19,00", que es
 donde la propia plantilla dibuja su línea de pie—. En el original estaban dimensionadas al texto de
