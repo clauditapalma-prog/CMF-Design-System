@@ -50,6 +50,21 @@ aparecen en el selector de diseño:
 | **CMF Sección** | Antetítulo y título | Separador entre bloques |
 | **CMF Contenido** | Antetítulo, título y cuatro viñetas | Lámina de trabajo |
 | **CMF En blanco** | — | Lámina con la marca, para componer libre |
+| **CMF Separador** | Número de bloque, antetítulo, título y bajada | Corte entre bloques, a sangre |
+
+### Sobre «CMF Separador»
+
+Es el único diseño que no se deriva de una diapositiva prototipo: se construyó nuevo. La razón es
+que `CMF Sección` comparte antetítulo, título y regla de acento con `CMF Contenido`, así que
+proyectado un separador se confunde con una lámina más. Este invierte el contraste —fondo
+institucional a sangre, tipografía en blanco y el número del bloque como marca de agua— para que el
+corte se lea desde el fondo de la sala.
+
+**Se agrega, no reemplaza.** `CMF Sección` se conserva tal cual: cambiarlo rompería las
+presentaciones que ya lo usan.
+
+El número del bloque es un marcador que se escribe a mano —`01`, `02`—, no un campo automático:
+PowerPoint no tiene un contador de secciones. La bajada es opcional; si se deja vacía, desaparece.
 
 Las cajas de texto se redimensionaron a la banda de contenido de la marca —de 1,00" a 19,00", que es
 donde la propia plantilla dibuja su línea de pie—. En el original estaban dimensionadas al texto de
