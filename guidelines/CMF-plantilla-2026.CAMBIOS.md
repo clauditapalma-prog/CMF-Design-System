@@ -22,16 +22,18 @@ diapositivas y otro para las notas—, y PowerPoint no tolera que se compartan.
 **Qué se hizo.** El patrón de notas recibe `theme2.xml`, copia exacta del original con otro nombre
 para distinguirlos. Como es una copia, la gráfica es idéntica.
 
+**Y las propiedades del documento quedaron obsoletas.** `docProps/app.xml` describe qué contiene el
+archivo: cuántas diapositivas, con qué títulos, qué tema. PowerPoint compara esa declaración contra
+el contenido real. Al agregar el tema del patrón de notas, la declaración dejó de calzar. Ahora se
+reescribe al final del proceso, con los valores reales.
+
 ### Una advertencia para quien construya sobre esta plantilla
 
-Hay un segundo defecto de la misma familia que **no está en la plantilla** pero aparece en cuanto se
-la usa como base: las propiedades del documento —`docProps/app.xml`— declaran el número de
-diapositivas y sus títulos. En la plantilla son tres y hay tres, así que está bien. Pero si se
-quitan o agregan diapositivas por programa y no se actualizan esas propiedades, el archivo termina
-declarando tres diapositivas y conteniendo cuarenta, y PowerPoint pide repararlo.
-
-Si vas a generar presentaciones desde esta plantilla con herramientas como `python-pptx`, recuerda
-reescribir `docProps/app.xml` al guardar. `build/presentacion.py` de este proyecto lo hace.
+Es el mismo defecto que aparece en cuanto se genera una presentación desde la plantilla con
+herramientas como `python-pptx`: se agregan diapositivas pero las propiedades siguen declarando las
+tres de muestra, y PowerPoint pide reparar el archivo. Si vas a generar presentaciones por programa,
+**reescribe `docProps/app.xml` al guardar**. La función `reescribir_propiedades` de
+`build/presentacion.py` en este proyecto lo hace y sirve de referencia.
 
 ---
 
