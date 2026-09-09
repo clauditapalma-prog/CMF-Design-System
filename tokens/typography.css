@@ -3,7 +3,19 @@
    ============================================================ */
 :root {
   /* Families */
-  --font-brand: "Verdana", "Source Sans 3", system-ui, sans-serif; /* official docs/slides */
+  /* Sin "Source Sans 3" en este fallback a propósito: Verdana no se puede
+     autohospedar (licencia de Microsoft, no redistribuible), así que en un motor
+     de render sin Verdana instalada (p. ej. exportación headless a PPTX/DOCX) el
+     stack debe caer en fuentes universales del sistema, no en una webfont que
+     probablemente tampoco esté instalada en la máquina que abra el archivo final
+     — si cayera en Source Sans 3, el documento queda compuesto en una fuente sin
+     incrustar y el texto se desajusta al abrirlo donde falte esa fuente.
+     Segoe UI (Windows) y San Francisco (Mac, invocada como -apple-system/
+     system-ui) son la fuente propia de cada sistema operativo —siempre están
+     instaladas, no hay que embeberlas— y, al ser ambas sans humanistas para UI,
+     se acercan más al espíritu de Source Sans 3 que Arial/Helvetica, que quedan
+     como último recurso. */
+  --font-brand: "Verdana", -apple-system, "Segoe UI", system-ui, Arial, "Helvetica Neue", Helvetica, sans-serif; /* official docs/slides */
   --font-sans:  "Source Sans 3", "Verdana", system-ui, -apple-system, "Segoe UI", sans-serif; /* web/UI */
   /* Sin fuente mono de marca: ninguna fuente entregada por la CMF define una.
      Se usa el stack monoespaciado del sistema (folios de trámite, códigos).
