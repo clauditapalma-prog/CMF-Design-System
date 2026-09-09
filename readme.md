@@ -109,6 +109,13 @@ Cómo escribe la CMF — replica esta voz en cada componente, pantalla y diaposi
 
 **`assets/backgrounds/`** — los dos masters oficiales 2026 (claro y oscuro). **`guidelines/`** — el manual de marca en PDF y la plantilla PPTX oficiales, más las tarjetas de especímenes.
 
+**`guidelines/plantillas-2026-nuevas/`** — familia adicional de plantillas 2026 (Word y
+PowerPoint), aprobada por Comunicaciones: documento de trabajo, estadísticas comentadas,
+estudios normativos, general, notas técnicas y una presentación, cada una con su `.dotx`/`.potx`
+editable y un `.docx`/`.pptx` de ejemplo con datos cargados. Se suman a
+`CMF-plantilla-2026.pptx` — no la reemplazan — como versiones en otros colores e imágenes
+dentro del mismo rango de marca. Ver `README.md` de esa carpeta.
+
 **`assets/logos/`** — las nueve variantes oficiales, **los dos vectoriales** (`logo-cmf-blanco.svg` para fondo oscuro, `logo-cmf-color-claim.svg` para fondo claro, extraído del `.ai` original) y el propio `logoCMF.ai.pdf`. Reglas y procedencia: `assets/logos/LOGOS.md`. **Ojo:** las tres variantes verticales son miniaturas de ~128×120 px — no las uses por sobre 60px de alto; en web van los vectoriales.
 
 **`components/`** — primitivos React reutilizables (cada uno `.jsx` + `.d.ts` + `.prompt.md`, con una tarjeta `*.card.html` por carpeta):
