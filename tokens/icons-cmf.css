@@ -1,0 +1,154 @@
+/* ============================================================
+   Iconografía oficial web — cmf-icon-2025.
+   Fuente de iconos propia de la CMF, la misma que usa www.cmfchile.cl
+   (archivo channels-525_cmf_icon_2025 del portal; 124 iconos, generada con
+   Fontello). AUTOHOSPEDADA en fonts/cmf-icon-2025/, sin CDN.
+   Los mismos iconos están como SVG sueltos en assets/icons/cmf-icon-2025/.
+   Uso: <i class="cmf-icon cmf-icon-balanza"></i> — o <Icon name="cmf-balanza" />.
+   Un solo grosor (línea). Para iconos de interfaz que este set no tiene
+   (lupa, menú, cerrar, flechas…) o para énfasis en negrita, usar Phosphor.
+   ============================================================ */
+@font-face {
+  font-family: "cmf-icon-2025";
+  src: url("../fonts/cmf-icon-2025/cmf-icon-2025.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.cmf-icon {
+  font-family: "cmf-icon-2025" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cmf-icon-consulta-dialogo:before { content: "\e800"; }
+.cmf-icon-dinero-digital:before { content: "\e801"; }
+.cmf-icon-escudo-alerta:before { content: "\e802"; }
+.cmf-icon-grafico-barras:before { content: "\e803"; }
+.cmf-icon-grafico-torta:before { content: "\e804"; }
+.cmf-icon-info-circulo:before { content: "\e805"; }
+.cmf-icon-maletin:before { content: "\e806"; }
+.cmf-icon-maletin-dinero:before { content: "\e807"; }
+.cmf-icon-moneda:before { content: "\e808"; }
+.cmf-icon-paraguas:before { content: "\e809"; }
+.cmf-icon-pin-mapa:before { content: "\e80a"; }
+.cmf-icon-pin-mapa-02:before { content: "\e80b"; }
+.cmf-icon-reporte-dinero:before { content: "\e80c"; }
+.cmf-icon-reporte-ok:before { content: "\e80d"; }
+.cmf-icon-telefono-mensaje:before { content: "\e80e"; }
+.cmf-icon-tramite-consulta:before { content: "\e80f"; }
+.cmf-icon-user-02:before { content: "\e810"; }
+.cmf-icon-users:before { content: "\e811"; }
+.cmf-icon-video:before { content: "\e812"; }
+.cmf-icon-video-conferencia:before { content: "\e813"; }
+.cmf-icon-agenda:before { content: "\e814"; }
+.cmf-icon-alerta-circulo:before { content: "\e815"; }
+.cmf-icon-alerta-triangulo:before { content: "\e816"; }
+.cmf-icon-archivo:before { content: "\e817"; }
+.cmf-icon-archivo-firma:before { content: "\e818"; }
+.cmf-icon-archivo-ok:before { content: "\e819"; }
+.cmf-icon-archivo-reclamo:before { content: "\e81a"; }
+.cmf-icon-archivo-reclamo2:before { content: "\e81b"; }
+.cmf-icon-balanza:before { content: "\e81c"; }
+.cmf-icon-banco:before { content: "\e81d"; }
+.cmf-icon-bandeja-entrada-bajar:before { content: "\e81e"; }
+.cmf-icon-bandeja-entrada-subir:before { content: "\e81f"; }
+.cmf-icon-base-datos:before { content: "\e820"; }
+.cmf-icon-billete-mano:before { content: "\e821"; }
+.cmf-icon-birrete:before { content: "\e822"; }
+.cmf-icon-bombero:before { content: "\e823"; }
+.cmf-icon-bombero2:before { content: "\e824"; }
+.cmf-icon-caja-archivo:before { content: "\e825"; }
+.cmf-icon-caja-archivo-subir:before { content: "\e826"; }
+.cmf-icon-calculadora:before { content: "\e827"; }
+.cmf-icon-calendario:before { content: "\e828"; }
+.cmf-icon-calendario2:before { content: "\e829"; }
+.cmf-icon-candado-clave:before { content: "\e82a"; }
+.cmf-icon-cara-feliz:before { content: "\e82b"; }
+.cmf-icon-cara-triste:before { content: "\e82c"; }
+.cmf-icon-caras-dual:before { content: "\e82d"; }
+.cmf-icon-carpeta:before { content: "\e82e"; }
+.cmf-icon-carpeta-buscar:before { content: "\e82f"; }
+.cmf-icon-carpeta-menos:before { content: "\e830"; }
+.cmf-icon-carpeta-varias:before { content: "\e831"; }
+.cmf-icon-certificado-01:before { content: "\e832"; }
+.cmf-icon-certificado-02:before { content: "\e833"; }
+.cmf-icon-claveunica:before { content: "\e834"; }
+.cmf-icon-cmf-lineal:before { content: "\e835"; }
+.cmf-icon-cmf-logo:before { content: "\e836"; }
+.cmf-icon-concsulta-circulo:before { content: "\e837"; }
+.cmf-icon-ahorro:before { content: "\e838"; }
+.cmf-icon-porcentaje:before { content: "\e839"; }
+.cmf-icon-clip:before { content: "\e83a"; }
+.cmf-icon-herramienta2:before { content: "\e83b"; }
+.cmf-icon-mouse:before { content: "\e83c"; }
+.cmf-icon-noticia:before { content: "\e83d"; }
+.cmf-icon-checklist:before { content: "\e83e"; }
+.cmf-icon-megafono:before { content: "\e83f"; }
+.cmf-icon-sinpapel:before { content: "\e840"; }
+.cmf-icon-bandera:before { content: "\e841"; }
+.cmf-icon-campana:before { content: "\e842"; }
+.cmf-icon-luz:before { content: "\e843"; }
+.cmf-icon-presentacion:before { content: "\e844"; }
+.cmf-icon-libro:before { content: "\e845"; }
+.cmf-icon-objetivo:before { content: "\e846"; }
+.cmf-icon-billetera:before { content: "\e847"; }
+.cmf-icon-brujula:before { content: "\e848"; }
+.cmf-icon-binoculares:before { content: "\e849"; }
+.cmf-icon-mundo:before { content: "\e84a"; }
+.cmf-icon-herramienta:before { content: "\e84b"; }
+.cmf-icon-tacometro:before { content: "\e84c"; }
+.cmf-icon-busca-ideas:before { content: "\e84d"; }
+.cmf-icon-mano-ok2:before { content: "\e84e"; }
+.cmf-icon-apreton-mano:before { content: "\e84f"; }
+.cmf-icon-mano-ok:before { content: "\e850"; }
+.cmf-icon-medalla:before { content: "\e851"; }
+.cmf-icon-objetivo2:before { content: "\e852"; }
+.cmf-icon-tren:before { content: "\e853"; }
+.cmf-icon-automovil2:before { content: "\e854"; }
+.cmf-icon-enchufe:before { content: "\e855"; }
+.cmf-icon-edificios:before { content: "\e856"; }
+.cmf-icon-etiqueta-compra:before { content: "\e857"; }
+.cmf-icon-paleta-colores:before { content: "\e858"; }
+.cmf-icon-confeti:before { content: "\e859"; }
+.cmf-icon-anteojos:before { content: "\e85a"; }
+.cmf-icon-premio:before { content: "\e85b"; }
+.cmf-icon-portatil:before { content: "\e85c"; }
+.cmf-icon-pantalla:before { content: "\e85d"; }
+.cmf-icon-hombre:before { content: "\e85e"; }
+.cmf-icon-mujer:before { content: "\e85f"; }
+.cmf-icon-mouse2:before { content: "\e860"; }
+.cmf-icon-combustible:before { content: "\e861"; }
+.cmf-icon-codigo:before { content: "\e862"; }
+.cmf-icon-accesibilidad:before { content: "\e863"; }
+.cmf-icon-atomo:before { content: "\e864"; }
+.cmf-icon-salvavidas:before { content: "\e865"; }
+.cmf-icon-archivo-lapiz:before { content: "\e866"; }
+.cmf-icon-estrella:before { content: "\e867"; }
+.cmf-icon-maleta:before { content: "\e868"; }
+.cmf-icon-lapiz:before { content: "\e869"; }
+.cmf-icon-virus:before { content: "\e86a"; }
+.cmf-icon-cesta-compra:before { content: "\e86b"; }
+.cmf-icon-carro-compra:before { content: "\e86c"; }
+.cmf-icon-medicamentos:before { content: "\e86d"; }
+.cmf-icon-escudo-ok:before { content: "\e86e"; }
+.cmf-icon-mundo2:before { content: "\e86f"; }
+.cmf-icon-fuego:before { content: "\e870"; }
+.cmf-icon-engranaje2:before { content: "\e871"; }
+.cmf-icon-engranaje:before { content: "\e872"; }
+.cmf-icon-equalizador:before { content: "\e873"; }
+.cmf-icon-ampolleta:before { content: "\e874"; }
+.cmf-icon-filtro:before { content: "\e876"; }
+.cmf-icon-caja-fuerte:before { content: "\e877"; }
+.cmf-icon-bus:before { content: "\e878"; }
+.cmf-icon-automovil:before { content: "\e879"; }
+.cmf-icon-microfono:before { content: "\e87a"; }
+.cmf-icon-podcast:before { content: "\e87b"; }
+.cmf-icon-filtro2:before { content: "\e87c"; }

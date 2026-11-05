@@ -66,6 +66,13 @@ oficiales (gris `#CCCCCC`, blanco `#FFFFFF`, morados `#5b2d83` / `#764896`, text
 > favicon no vienen tal cual en el kit digital. Hasta su aprobación, tratarlos como propuesta.
 > Si Comunicaciones entrega versiones oficiales, reemplazar estos archivos con el mismo nombre.
 
+> **Antecedente del portal (revisado el 5 de noviembre de 2026).** El favicon de www.cmfchile.cl
+> (`/favicon.ico`, 16×16 px) ya es el **isotipo "CMF" solo**, el mismo dibujo de
+> `favicon-cmf.svg`; el de este sistema solo agrega tamaños mayores (32, 180 y 512 px). El logo
+> vertical **no aparece** en el portal. Preguntas abiertas para Comunicaciones: **¿se aprueban el
+> isotipo y el favicon?**, **¿se aprueba el vertical recompuesto?** y **¿cuál es la medida
+> oficial del espacio de protección?** (ver *Espacio de protección* más abajo).
+
 ## Preferir la versión con claim
 
 > "Al momento de usar el logo se debe preferir hacerlo con la incorporación del claim."
@@ -78,6 +85,14 @@ CMF aparece de forma secundaria dentro de un documento.
 > **Requiere aprobación.** El manual (pág. 5) es explícito: el uso sin claim va
 > "**previo visto bueno de Comunicaciones**". No es una decisión de diseño: se pide autorización a
 > `AreaComunicacionCMF@cmfchile.cl`.
+
+> **Antecedente del portal (revisado el 5 de noviembre de 2026).** www.cmfchile.cl ya usa el logo
+> horizontal **sin claim** en la cabecera y en el pie (`channels-525_logo_canal.svg` y
+> `channels-525_cmf_logo_footer.svg`). Además, ese logo del portal **no usa los colores del kit**:
+> trae morado `#6D4C95` / `#52307E` y gris `#737373`, mientras el oficial usa `#764896` / `#5B2D83`
+> y `#6F6F6E`. Preguntas abiertas para Comunicaciones: **¿se aprueba el logo sin claim para uso
+> web?** y **¿se reemplaza el logo del portal por el del kit?** (`logo-cmf-color-horizontal.svg`
+> y `logo-cmf-blanco-horizontal.svg` de esta carpeta).
 
 ## Los tres casos de uso correcto
 

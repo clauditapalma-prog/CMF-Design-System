@@ -17,5 +17,15 @@ compuesta con los primitivos de `components/`.
 
 **Pendiente / limitación:** Normativa, Estadísticas y Sala de prensa no venían en las fuentes
 entregadas; se dejan como páginas vacías con nota explícita en vez de inventar diseño.
+
+Referencia **de contenido** (no visual) en el portal real, revisado el 5 de noviembre de 2026:
+
+- Normativa: https://www.cmfchile.cl/portal/normativa/624/w4-propertyvalue-49149.html (Buscador de normativa – Consulta Global)
+- Estadísticas: https://www.cmfchile.cl/portal/estadisticas/626/w4-propertyname-972.html (Estadísticas generales)
+- Sala de prensa: https://www.cmfchile.cl/portal/prensa/625/w4-propertyvalue-43349.html (Comunicados; también Presentaciones y Galerías de imágenes)
+
+El portal actual usa otro sistema visual (Bootstrap, con azules, cian y rojo): sirve para saber
+qué contenido y funciones necesita cada pantalla, **no para copiar su aspecto**. Si se diseñan,
+hacerlo con los tokens y componentes de este sistema.
 `Motif` usa el fondo oficial 2026 (`assets/backgrounds/cmf-fondo-oscuro-2026.jpg`); el
 tratamiento de bloques diagonales se conserva solo en las diapositivas de sección y cierre.

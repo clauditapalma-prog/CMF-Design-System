@@ -810,31 +810,40 @@ Object.assign(__ds_scope, { Tabs });
 // ui_kits/portal/Icon.jsx
 try { (() => {
 /**
- * CMF icon set — **Phosphor Icons**, peso Light (https://phosphoricons.com).
- * Se sirve como webfont; `name` mantiene la API interna del sistema y se
- * traduce al nombre de Phosphor.
+ * Iconos del sistema CMF — dos sets que conviven, como en www.cmfchile.cl:
  *
- * DESPLIEGUE. La fuente está **autohospedada** en `fonts/phosphor/` y se
- * declara en `tokens/icons-light.css` y `tokens/icons-bold.css`, ambos
- * importados desde `styles.css`. No hay CDN: el despliegue interno de la CMF
- * no tiene salida a internet, misma razón por la que Source Sans 3 vive en
- * `fonts/`. Basta con enlazar `styles.css`.
+ * 1. **cmf-icon-2025** (oficial). Fuente de iconos propia de la CMF, la misma
+ *    del portal: 124 pictogramas de línea (banco, balanza, maletín, alcancía…).
+ *    Fuente en `fonts/cmf-icon-2025/`, reglas en `tokens/icons-cmf.css`, SVG
+ *    sueltos en `assets/icons/cmf-icon-2025/`. Tiene un solo grosor.
+ * 2. **Phosphor Light / Bold** (https://phosphoricons.com, MIT), complemento
+ *    para lo que el set oficial no trae: lupa, menú, cerrar, flechas,
+ *    chevrones, descargar, reloj, check… y para el énfasis en negrita.
  *
- * SUSTITUCIÓN DECLARADA. El set oficial de la CMF (manual pág. 12, reproducido
- * en assets/icons/manual-p12-iconografia-oficial.png) vive como ilustraciones
- * vectoriales dentro de la plantilla de imágenes de apoyo y se decidió no
- * incorporarlo: son piezas gráficas temáticas, no iconos de interfaz.
- * Phosphor Light se eligió por ser lo más cercano a la línea del manual —
- * trazo ~1.25, esquinas redondeadas, buena cobertura financiera.
+ * Regla: si el nombre tiene equivalente en el set oficial (tabla OFICIAL), se
+ * usa ese; `peso="bold"` siempre usa Phosphor Bold. Para pedir directamente un
+ * icono oficial, anteponer `cmf-` a su nombre: `<Icon name="cmf-ahorro" />`
+ * (catálogo en la tarjeta "Set oficial web — cmf-icon-2025").
  *
- * Lo que Phosphor NO replica: el glifo compuesto (objeto + insignia pequeña
- * superpuesta) que es la firma del set CMF. Ver ICONOGRAFÍA en el readme.
+ * Todo está autohospedado: el despliegue interno de la CMF no tiene salida a
+ * internet. Basta con enlazar `styles.css`.
  */
-// Sólo se autohospedaron los pesos light y bold. Añadir otro peso = copiar su
-// style.css y su .woff2 desde phosphor-icons/web y sumar el @import.
+// Phosphor: solo se autohospedaron los pesos light y bold.
 const PESOS = {
   light: 'ph-light',
   bold: 'ph-bold'
+};
+
+// Nombre interno → icono del set oficial cmf-icon-2025.
+const OFICIAL = {
+  shield: "escudo-ok",
+  graduation: "birrete",
+  alert: "alerta-triangulo",
+  building: "edificios",
+  chart: "grafico-barras",
+  bell: "campana",
+  scale: "balanza",
+  globe: "mundo"
 };
 const NOMBRES = {
   search: "magnifying-glass",
@@ -873,9 +882,11 @@ function Icon({
   style
 }) {
   const p = PESOS[peso] ? peso : 'light';
-  const glifo = NOMBRES[name] || name;
+  const directo = typeof name === 'string' && name.indexOf('cmf-') === 0;
+  const oficial = directo ? name.slice(4) : p === 'light' ? OFICIAL[name] : null;
+  const className = oficial ? 'cmf-icon cmf-icon-' + oficial : PESOS[p] + ' ph-' + (NOMBRES[name] || name);
   return /*#__PURE__*/React.createElement("i", {
-    className: PESOS[p] + ' ph-' + glifo,
+    className: className,
     "aria-hidden": "true",
     style: {
       fontSize: size,
