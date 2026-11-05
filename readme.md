@@ -23,7 +23,7 @@ Referencias citadas por el codebase pero **no incluidas en él** (ver *Faltantes
 
 **Validado previamente con el usuario y conservado:**
 - **Tipografía** — **Verdana** para documentos/diapositivas oficiales (`--font-brand`); **Source Sans 3** para digital/UI (`--font-sans`).
-- **Iconografía** — iconos de línea **Lucide** (sustitución; ver ICONOGRAFÍA).
+- **Iconografía** — iconos de línea **Phosphor Light**, autohospedados (sustitución del set oficial; ver ICONOGRAFÍA). Antes se usaba Lucide.
 - **Navy de marca** — `#162D56` validado contra el `.pptx` oficial; el token redondea a `#162C55`.
 
 ### Faltantes (bloqueos conocidos)
@@ -34,7 +34,7 @@ Referencias citadas por el codebase pero **no incluidas en él** (ver *Faltantes
    - **Timbre de agua**: R204 G204 B204 = `#CCCCCC`, ahora token `--cmf-logo-timbre`.
    - **Regla nueva**: el logo sin claim requiere **visto bueno de Comunicaciones** (pág. 5) — documentado en `LOGOS.md` y en `Logo.prompt.md`.
    - **Paleta de apoyo gráfico**: el manual titula las páginas ("primera categoría", "segunda categoría", "colores complementarios", "colores para gráficos") pero **publica las muestras como gráfica sin texto**, así que navy / índigo / teal / teal suave siguen muestreados del PPTX oficial, no leídos del manual.
-   - **Página 12, iconografía: vista, no extraíble.** La usuaria aportó una captura, guardada en `assets/icons/manual-p12-iconografia-oficial.png` y visible en la tarjeta "Set oficial CMF". Los vectores no se pudieron sacar del PDF, así que Lucide sigue como sustitución — pero ahora la descripción del set real está documentada y el trazo de `Icon.jsx` se ajustó a 1.4 para parecerse. Falta pedir los SVG a Comunicaciones.
+   - **Página 12, iconografía: vista, no extraíble.** La usuaria aportó una captura, guardada en `assets/icons/manual-p12-iconografia-oficial.png` y visible en la tarjeta "Set oficial CMF". Los vectores no se pudieron sacar del PDF, así que se usa un set sustituto (hoy **Phosphor Light**; ver ICONOGRAFÍA) — pero ahora la descripción del set real está documentada y el trazo de `Icon.jsx` se ajustó a 1.4 para parecerse. Falta pedir los SVG a Comunicaciones.
 3. **`--font-mono`** — la CMF no define una fuente monoespaciada de marca; el token usa el stack del sistema. Se usa sólo en folios de trámite.
 4. **Normativa, Estadísticas y Sala de prensa** en el portal: no había diseño de referencia, así que las pantallas quedan **intencionalmente vacías con nota explícita** en vez de inventarlas.
 
@@ -116,7 +116,7 @@ editable y un `.docx`/`.pptx` de ejemplo con datos cargados. Se suman a
 `CMF-plantilla-2026.pptx` — no la reemplazan — como versiones en otros colores e imágenes
 dentro del mismo rango de marca. Ver `README.md` de esa carpeta.
 
-**`assets/logos/`** — las nueve variantes oficiales, **los dos vectoriales** (`logo-cmf-blanco.svg` para fondo oscuro, `logo-cmf-color-claim.svg` para fondo claro, extraído del `.ai` original) y el propio `logoCMF.ai.pdf`. Reglas y procedencia: `assets/logos/LOGOS.md`. **Ojo:** las tres variantes verticales son miniaturas de ~128×120 px — no las uses por sobre 60px de alto; en web van los vectoriales.
+**`assets/logos/`** — las nueve variantes oficiales, **los dos vectoriales oficiales** (`logo-cmf-blanco.svg` para fondo oscuro, `logo-cmf-color-claim.svg` para fondo claro, extraído del `.ai` original), el propio `logoCMF.ai.pdf` y **vectoriales derivados** de esos originales: horizontal sin claim, gris con claim, vertical (SVG y PNG de 1200 px) e isotipo, en color, gris y blanco, más un favicon. Reglas y procedencia: `assets/logos/LOGOS.md`. **Ojo:** los PNG verticales oficiales son miniaturas de ~128×120 px — en grande usa `logo-cmf-*-vertical.svg`. Los verticales recompuestos, el isotipo y el favicon están pendientes de visto bueno de Comunicaciones.
 
 **`components/`** — primitivos React reutilizables (cada uno `.jsx` + `.d.ts` + `.prompt.md`, con una tarjeta `*.card.html` por carpeta):
 - `brand/` — **Logo**
@@ -126,7 +126,7 @@ dentro del mismo rango de marca. Ver `README.md` de esa carpeta.
 
 Inventario completo del sistema: **Logo, Button, Badge, Card, Alert, Input, Select, Checkbox, Tabs, Breadcrumb** — exactamente las diez familias que definía el bundle de origen, sin añadidos.
 
-**Adiciones intencionales:** ninguna en `components/`. En `ui_kits/portal/` sí hay dos piezas de apoyo que el bundle original también tenía: **Icon** (envoltorio del set Lucide) y **Motif** (tratamiento de portada), separado a su propio archivo `Motif.jsx` porque lo usan dos pantallas.
+**Adiciones intencionales:** ninguna en `components/`. En `ui_kits/portal/` sí hay dos piezas de apoyo que el bundle original también tenía: **Icon** (envoltorio del set de iconos, hoy Phosphor Light) y **Motif** (tratamiento de portada), separado a su propio archivo `Motif.jsx` porque lo usan dos pantallas.
 
 **`ui_kits/portal/`** — recreación del sitio web público. `index.html` es la entrada interactiva (Inicio → Trámites → asistente de Reclamo → CMF Educa). Archivos: `Header`, `Footer`, `Home`, `Motif`, `Tramites`, `ReclamoForm`, `Educa`, `Icon`. Detalle en `ui_kits/portal/README.md`.
 

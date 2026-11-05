@@ -17,5 +17,5 @@ compuesta con los primitivos de `components/`.
 
 **Pendiente / limitación:** Normativa, Estadísticas y Sala de prensa no venían en las fuentes
 entregadas; se dejan como páginas vacías con nota explícita en vez de inventar diseño.
-El fondo oficial de red 2026 (`assets/backgrounds/cmf-network-texture.jpeg`) no estaba
-disponible: `Motif` usa el tratamiento de bloques diagonales mientras no se entregue el JPEG.
+`Motif` usa el fondo oficial 2026 (`assets/backgrounds/cmf-fondo-oscuro-2026.jpg`); el
+tratamiento de bloques diagonales se conserva solo en las diapositivas de sección y cierre.

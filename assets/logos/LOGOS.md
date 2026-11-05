@@ -3,8 +3,9 @@
 Fuente: **kit digital de la CMF**, https://kitdigital.cmfchile.cl/logo-CMF.html
 (versión 1.3, actualizado 14/05/2026). Consultas: `AreaComunicacionCMF@cmfchile.cl`.
 
-Todos los archivos de esta carpeta se descargaron de ahí **sin modificar**. El manual de marca
-completo está en `../templates/Manual-uso-CMF-breve-2026.pdf`.
+Las nueve variantes, `logo-cmf-blanco.svg` y `logoCMF.ai.pdf` se descargaron de ahí **sin
+modificar**. Los demás archivos se **derivaron de esos originales** (ver *Archivos derivados* más
+abajo). El manual de marca completo está en `../../guidelines/Manual-uso-CMF-breve-2026.pdf`.
 
 ## Los tres elementos del logo
 
@@ -37,12 +38,33 @@ completo está en `../templates/Manual-uso-CMF-breve-2026.pdf`.
 ## Resolución real de cada archivo
 
 Los horizontales vienen grandes (`logo-CMF-color-claim.png` mide 2084×632). **Las tres variantes
-verticales, en cambio, son miniaturas de ~128×120 px**: no sirven por sobre unos 60px de alto, y a
-128px ya están a 1x exacto, así que en pantallas HiDPI se ven blandas. Si necesitas el lockup
-vertical en grande, pídelo a Comunicaciones o compónlo desde el `.ai`; no lo amplíes.
+verticales, en cambio, son miniaturas de ~128×120 px**: no sirven por sobre unos 60px de alto. No
+las amplíes: usa `logo-cmf-{color,gris,blanco}-vertical.svg` o los PNG de 1200 px (ver abajo).
 
 En web, prefiere siempre los vectoriales: `logo-cmf-color-claim.svg` sobre fondo claro y
 `logo-cmf-blanco.svg` sobre fondo oscuro.
+
+## Archivos derivados (vectoriales y alta resolución)
+
+Agregados el 05/11/2026 para cubrir variantes que el kit digital solo publica en PNG pequeño o no
+publica. **No se redibujó nada**: son las mismas curvas de `logoCMF.ai.pdf` (o de
+`logo-cmf-blanco.svg`), recortadas o recoloreadas con los colores exactos medidos en los PNG
+oficiales (gris `#CCCCCC`, blanco `#FFFFFF`, morados `#5b2d83` / `#764896`, texto `#6f6f6e`).
+
+| Archivo | Variante | Cómo se obtuvo |
+|---|---|---|
+| `logo-cmf-color-horizontal.svg` | Color horizontal (sin claim) | Arte del `.ai` sin el claim |
+| `logo-cmf-gris-horizontal.svg` | Gris horizontal (sin claim) | Ídem, en `#CCCCCC` |
+| `logo-cmf-blanco-horizontal.svg` | Blanco horizontal (sin claim) | Ídem, en blanco |
+| `logo-cmf-gris-claim.svg` | Gris **con claim** | `logo-cmf-blanco.svg` en `#CCCCCC` (misma composición que `logo-CMF-gris-claim.png`) |
+| `logo-cmf-{color,gris,blanco}-vertical.svg` | Vertical | **Recompuesto** desde el `.ai`: isotipo y texto al mismo ancho, alineados a la izquierda, con línea de 1/120 del ancho entre ambos; proporciones medidas en los verticales oficiales. En color, el texto va en `#1d1d1b`, como en `logo-CMF-color-vertical.jpg` |
+| `logo-CMF-{color,gris,blanco}-vertical-1200px.png` | Vertical, PNG 1200 px de ancho | Exportado del SVG vertical |
+| `logo-cmf-{color,gris,blanco}-isotipo.svg` | Isotipo solo (la "imagen") | Arte del `.ai` sin texto, línea ni claim |
+| `favicon-cmf.svg`, `favicon-cmf-{32,180,512}.png` | Favicon (propuesta) | Isotipo color centrado en un cuadrado |
+
+> **Pendiente de visto bueno de Comunicaciones:** los verticales recompuestos, el isotipo solo y el
+> favicon no vienen tal cual en el kit digital. Hasta su aprobación, tratarlos como propuesta.
+> Si Comunicaciones entrega versiones oficiales, reemplazar estos archivos con el mismo nombre.
 
 ## Preferir la versión con claim
 

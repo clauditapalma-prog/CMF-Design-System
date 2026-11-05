@@ -33,7 +33,7 @@ Es el mismo defecto que aparece en cuanto se genera una presentación desde la p
 herramientas como `python-pptx`: se agregan diapositivas pero las propiedades siguen declarando las
 tres de muestra, y PowerPoint pide reparar el archivo. Si vas a generar presentaciones por programa,
 **reescribe `docProps/app.xml` al guardar**. La función `reescribir_propiedades` de
-`build/presentacion.py` en este proyecto lo hace y sirve de referencia.
+`build/presentacion.py` lo hace y sirve de referencia (ver nota en *Cómo se regenera*).
 
 ---
 
@@ -113,6 +113,10 @@ sus partes sin comprimir.
 ```bash
 python3 build/corregir_plantilla.py
 ```
+
+> **Nota:** la carpeta `build/` con estos scripts y `CMF-plantilla-2026.original.pptx` **no está en
+> este repositorio**; quedaron en el equipo de trabajo de Arquitectura. El `.pptx` publicado aquí ya
+> incluye todas las correcciones, así que no hace falta regenerarlo para usarlo.
 
 Lee `CMF-plantilla-2026.original.pptx` y escribe `CMF-plantilla-2026.pptx`. El script está comentado
 y es la referencia de qué hace cada corrección.
